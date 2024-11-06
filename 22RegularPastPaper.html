@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Software Engineering Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2e6c80;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .question {
+            margin-bottom: 30px;
+        }
+        .answer {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #2e6c80;
+            margin-top: 10px;
+            display: none; /* Hide answers by default */
+        }
+        button {
+            margin-top: 10px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #cccccc;
+            margin: 40px 0;
+        }
+        blockquote {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            margin-left: 0;
+        }
+    </style>
+    <script>
+			function showAnswer(answerId, button) {
+					var answerDiv = document.getElementById(answerId);
+					if (answerDiv.style.display === 'block') {
+							answerDiv.style.display = 'none';
+							button.textContent = 'Show ChatGPT Answer';
+					} else {
+							answerDiv.style.display = 'block';
+							button.textContent = 'Hide ChatGPT Answer';
+					}
+			}
+    </script>
+</head>
+<body>
+    <h1>2022 Regular SSE Past Paper (answered by ChatGPT o1)</h1>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <h2>Question I</h2>
+
+        <h3>a. Analysis of Secure Design Principles</h3>
+        <p>
+            Once we build software, we need to use secure design principles. Here is a list of a few such principles:
+        </p>
+        <ol>
+            <li>Least Privilege</li>
+            <li>Separation of Duties</li>
+            <li>Defense in Depth</li>
+            <li>Fail Safe</li>
+            <li>Complete Mediation</li>
+        </ol>
+        <p>
+            You are free to select <strong>four</strong> of these and analyze how they are implemented in modern-day software giants like Google, Facebook, Uber, etc.
+            (5 marks)
+        </p>
+        <button onclick="showAnswer('answer1a', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer1a">
+            <h4>Answer:</h4>
+            <ol>
+                <li><strong>Least Privilege:</strong><br>
+                    Modern tech companies like Google implement the principle of least privilege by ensuring that users and services have only the minimum level of access necessary to perform their tasks. For example, Google's internal systems grant employees access only to the data and systems they need for their roles, reducing the risk of unauthorized access or data breaches.
+                </li>
+                <br>
+                <li><strong>Separation of Duties:</strong><br>
+                    Facebook applies separation of duties by dividing responsibilities among different teams and systems. For instance, the team responsible for developing code is separate from the team that deploys code to production. This reduces the risk of fraud and errors, as no single individual has control over all aspects of a critical process.
+                </li>
+                <br>
+                <li><strong>Defense in Depth:</strong><br>
+                    Uber employs a multi-layered security approach to protect its infrastructure and data. This includes perimeter defenses like firewalls and intrusion detection systems, as well as internal controls such as encryption, access controls, and continuous monitoring. By having multiple layers, if one security measure fails, others are in place to maintain security.
+                </li>
+                <br>
+                <li><strong>Fail Safe:</strong><br>
+                    Companies like Google design their systems to default to a secure state in the event of a failure. For example, if an authentication service becomes unavailable, systems are designed to deny access rather than allow potentially unauthorized access. This ensures that security is maintained even when unexpected issues occur.
+                </li>
+            </ol>
+        </div>
+
+        <h3>b. Critique of Least Privilege in Mobile Devices</h3>
+        <p>
+            The principle of least privilege is the act of providing only the minimum level of access necessary to perform a particular task regarding software design. Examples include runtime privileges, need-to-know, and access controls. Critique how modern-day mobile devices like Android phones or iPhones use these in their implementations.
+            (5 marks)
+        </p>
+        <button onclick="showAnswer('answer1b', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer1b">
+            <h4>Answer:</h4>
+            <p>
+                Modern mobile operating systems like Android and iOS implement the principle of least privilege through several mechanisms:
+            </p>
+            <ul>
+                <li><strong>Runtime Permissions:</strong> Apps request permissions at runtime rather than at installation. Users can grant or deny access to specific features (e.g., location, camera) when the app needs them, ensuring apps have access only when necessary.</li>
+                <li><strong>Sandboxing:</strong> Each app operates in its own sandboxed environment, isolating it from other apps and system resources. This prevents apps from accessing data or functions they don't need.</li>
+                <li><strong>Need-to-Know Access:</strong> Apps are required to declare the permissions they need in their manifest files (Android) or plist files (iOS). The operating system enforces these declared permissions, and apps cannot access resources beyond what they have requested and been granted.</li>
+                <li><strong>User Control:</strong> Users have the ability to review and modify app permissions in the device settings, giving them control over what each app can access.</li>
+            </ul>
+            <p>
+                While these measures enhance security by adhering to the principle of least privilege, there are challenges. Some users may grant unnecessary permissions out of convenience or lack of understanding, and malicious apps may exploit granted permissions. Continuous improvements are needed to balance usability and security.
+            </p>
+        </div>
+
+        <h3>c. Short Questions</h3>
+        <p><strong>i. What are secure software requirements? (2 marks)</strong></p>
+        <button onclick="showAnswer('answer1c1', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer1c1">
+            <h4>Answer:</h4>
+            <p>
+                Secure software requirements are specifications that define the necessary security features and practices a software system must implement to protect against threats and vulnerabilities. They include functional requirements (e.g., authentication mechanisms, encryption) and non-functional requirements (e.g., performance under attack, compliance with regulations). These requirements guide developers in building software that ensures confidentiality, integrity, and availability.
+            </p>
+        </div>
+
+        <p><strong>ii. Do you think modern systems like Google, Yahoo, or Facebook have analyzed these secure software requirements? If so, examine the value of analyzing SSR before developing these software systems. (3 marks)</strong></p>
+        <button onclick="showAnswer('answer1c2', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer1c2">
+            <h4>Answer:</h4>
+            <p>
+                Yes, modern systems like Google, Yahoo, and Facebook have thoroughly analyzed secure software requirements. Analyzing SSR before development is crucial because:
+            </p>
+            <ul>
+                <li><strong>Proactive Threat Mitigation:</strong> Identifying potential threats early allows for the integration of security measures into the design, reducing vulnerabilities.</li>
+                <li><strong>Cost Efficiency:</strong> Addressing security requirements during the requirement phase is more cost-effective than fixing issues after deployment.</li>
+                <li><strong>Regulatory Compliance:</strong> Ensures that the software meets legal and industry standards, avoiding penalties and reputational damage.</li>
+                <li><strong>User Trust:</strong> Builds user confidence by protecting their data and providing secure services.</li>
+            </ul>
+            <p>
+                Overall, analyzing SSR is vital for developing robust, secure systems that can withstand evolving security challenges.
+            </p>
+        </div>
+
+        <h3>d. Assessment of Uber Hack Root Causes (5 marks)</h3>
+        <p>
+            This is an open-ended question. Even though most of the software secure requirements are analyzed, why was Uber hacked recently? Assess the root causes of this major issue for this kind of incident.
+        </p>
+        <button onclick="showAnswer('answer1d', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer1d">
+            <h4>Answer:</h4>
+            <p>
+                The recent Uber hack can be attributed to several root causes:
+            </p>
+            <ul>
+                <li><strong>Social Engineering:</strong> Attackers used social engineering techniques to trick an employee into revealing login credentials or accepting multi-factor authentication (MFA) requests, bypassing security measures.</li>
+                <li><strong>Weak MFA Implementation:</strong> The MFA system may have been vulnerable to fatigue attacks, where repeated prompts lead the user to approve access inadvertently.</li>
+                <li><strong>Insufficient Access Controls:</strong> Once inside, the attacker gained access to critical systems, indicating that network segmentation and least privilege principles were not adequately enforced.</li>
+                <li><strong>Lack of Monitoring:</strong> The intrusion was not detected promptly, suggesting inadequate monitoring and incident response capabilities.</li>
+            </ul>
+            <p>
+                Despite having secure software requirements, human factors and implementation gaps can lead to breaches. Continuous employee training, robust MFA methods (like hardware tokens), strict access controls, and effective monitoring are essential to prevent such incidents.
+            </p>
+        </div>
+
+        <h3>e. Analysis of Cloud Application Security Best Practices (5 marks)</h3>
+        <p>
+            Here is a list of cloud application best practices for effective security given by cloud giants like AWS, Azure, and Google:
+        </p>
+        <ul>
+            <li>Identity Access Management</li>
+            <li>Encryption</li>
+            <li>Threat Monitoring</li>
+            <li>Data Privacy & Compliance</li>
+            <li>Automated Security Testing</li>
+        </ul>
+        <p>
+            Provide your analysis, explaining with a few examples.
+        </p>
+        <button onclick="showAnswer('answer1e', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer1e">
+            <h4>Answer:</h4>
+            <ol>
+                <li><strong>Identity Access Management (IAM):</strong>
+                    <p>
+                        IAM involves managing user identities and their access to resources. AWS provides IAM services to create users, groups, and roles with fine-grained permissions. For example, assigning a role to an EC2 instance allows it to access S3 buckets without embedding credentials.
+                    </p>
+                </li>
+                <li><strong>Encryption:</strong>
+                    <p>
+                        Encryption protects data at rest and in transit. Azure offers Azure Disk Encryption for virtual machine disks and enforces TLS encryption for data in transit. For instance, using Azure Key Vault to manage encryption keys enhances security.
+                    </p>
+                </li>
+                <li><strong>Threat Monitoring:</strong>
+                    <p>
+                        Continuous monitoring detects suspicious activities. Google Cloud's Security Command Center provides threat detection and security insights. It can identify anomalies like unusual network traffic or unauthorized access attempts.
+                    </p>
+                </li>
+                <li><strong>Data Privacy & Compliance:</strong>
+                    <p>
+                        Ensuring compliance with regulations like GDPR is critical. AWS provides services like AWS Artifact to access compliance reports and supports data localization requirements by allowing data storage in specific regions.
+                    </p>
+                </li>
+                <li><strong>Automated Security Testing:</strong>
+                    <p>
+                        Integrating security testing into the CI/CD pipeline automates vulnerability detection. Tools like AWS CodePipeline can include static code analysis and automated penetration testing to identify and remediate issues before deployment.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                Implementing these best practices enhances the security posture of cloud applications by addressing key areas of potential risk.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h2>Question 2</h2>
+
+        <h3>a. From Requirements to Secure Software Design</h3>
+        <p>
+            Once a software developer is clear with the secure software concepts and requirements, the next step is to design a secure software.
+        </p>
+        <p><strong>i. What is the difference between requirement analysis and secure software design? (3 marks)</strong></p>
+        <button onclick="showAnswer('answer2a1', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer2a1">
+            <h4>Answer:</h4>
+            <p>
+                <strong>Requirement Analysis:</strong> This phase involves gathering and defining what the software system should do, including functional and non-functional requirements. It focuses on understanding stakeholder needs, identifying system objectives, and documenting specifications.
+            </p>
+            <p>
+                <strong>Secure Software Design:</strong> This phase translates requirements into a blueprint for building the software, with a focus on security. It involves defining the system architecture, components, interfaces, and data flows, incorporating security controls and best practices to mitigate identified risks.
+            </p>
+            <p>
+                The key difference is that requirement analysis defines "what" the system should do, while secure software design defines "how" the system will meet those requirements securely.
+            </p>
+        </div>
+
+        <p><strong>ii. Is the design more important than the analysis and requirement gathering? Justify your answer. (4 marks)</strong></p>
+        <button onclick="showAnswer('answer2a2', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer2a2">
+            <h4>Answer:</h4>
+            <p>
+                Both phases are critically important and interdependent. However, one could argue that without thorough requirement analysis, the design may not address the actual needs or may overlook critical security requirements. Conversely, even with excellent requirements, a poor design can introduce vulnerabilities and fail to meet security objectives.
+            </p>
+            <p>
+                Therefore, neither phase is more important than the other; both are essential. A successful project requires accurate requirement analysis followed by a secure and effective design to implement those requirements.
+            </p>
+        </div>
+
+        <p><strong>iii. As the design talks about a solution and a solution involves technology, justify whether securing technologies would solve the problem. (3 marks)</strong></p>
+        <button onclick="showAnswer('answer2a3', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer2a3">
+            <h4>Answer:</h4>
+            <p>
+                Securing technologies are tools that can help implement security controls, but they alone do not solve the problem. Security is a holistic process that includes people, processes, and technology. Without proper implementation, policies, training, and maintenance, even the most advanced technologies can be ineffective.
+            </p>
+            <p>
+                Therefore, while securing technologies are essential components of a solution, they must be integrated into a comprehensive security strategy that includes secure design principles, risk management, and ongoing assessment to effectively solve security problems.
+            </p>
+        </div>
+
+        <h3>b. Synopsis of Security Architecture Components (5 marks)</h3>
+        <p>
+            Security Architecture is a vital component of any software design. This is used by any big software vendor. Read the below extract about security architecture:
+        </p>
+        <blockquote>
+            "Security architecture includes 'control identification and prioritization.' Various other components of security architecture include distributed computing (e.g., message queuing, peer-to-peer, and client-server), service-oriented architecture (e.g., web services, service bus, and enterprise), rich internet applications (e.g., constant connectivity, remote code execution, client-side exploits), pervasive/ubiquitous computing (e.g., sensor networks, near field communication, RFID, location-based, wireless, and IoT), embedded (e.g., firmware, control systems), cloud architectures (e.g., infrastructure as a service, platform as a service, software as a service), hardware platform concerns, mobile applications."
+        </blockquote>
+        <p><strong>Build your synopsis about the above showcasing the practical usage.</strong></p>
+        <button onclick="showAnswer('answer2b', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer2b">
+            <h4>Answer:</h4>
+            <p>
+                Security architecture encompasses various components that address different aspects of modern computing environments:
+            </p>
+            <ul>
+                <li><strong>Distributed Computing:</strong> In systems using message queuing or peer-to-peer networks, security architecture ensures secure communication channels, authentication of nodes, and integrity of messages. For example, secure message queues in microservices architectures use encryption and access controls.</li>
+                <li><strong>Service-Oriented Architecture (SOA):</strong> Web services require security measures like WS-Security for message integrity and confidentiality. Enterprise service buses implement security policies to control access between services.</li>
+                <li><strong>Rich Internet Applications:</strong> Applications with constant connectivity and client-side execution must protect against remote code execution and client-side exploits by implementing secure coding practices and regular updates.</li>
+                <li><strong>Pervasive/Ubiquitous Computing:</strong> IoT devices and sensors often have limited resources. Security architecture here involves lightweight encryption, secure firmware updates, and authentication mechanisms to prevent unauthorized access.</li>
+                <li><strong>Embedded Systems:</strong> Firmware and control systems need secure boot processes, code signing, and runtime protections to prevent tampering and ensure reliability.</li>
+                <li><strong>Cloud Architectures:</strong> Security controls in IaaS, PaaS, and SaaS models include identity management, data encryption, and network security groups to protect cloud resources and data.</li>
+                <li><strong>Hardware Platform Concerns:</strong> Security architecture addresses hardware vulnerabilities (e.g., Meltdown, Spectre) by applying patches, using hardware security modules (HSMs), and implementing trusted execution environments.</li>
+                <li><strong>Mobile Applications:</strong> Mobile security involves secure app development, encryption of data at rest and in transit, and protection against malware and unauthorized access.</li>
+            </ul>
+            <p>
+                By integrating these components into a cohesive security architecture, organizations can effectively mitigate risks across various platforms and technologies.
+            </p>
+        </div>
+
+        <h3>c. Use Cases and Misuse Cases in Secure Interface Design (10 marks)</h3>
+        <p>
+            Performing Secure Interface Design is one of the main models used in secure software design. This includes:
+        </p>
+        <ul>
+            <li>Secure Management Interfaces</li>
+            <li>Log Interfaces</li>
+            <li>Out of Band Management</li>
+            <li>Data and Key Sharing Between the Apps</li>
+            <li>Protocol Design Choices (API, Model, States)</li>
+        </ul>
+        <p>
+            If you are given the opportunity to write a few use cases and misuse cases for any application (e.g., Facebook, Uber, Instagram) for the above design components, construct <strong>three use cases</strong> and <strong>three misuse cases</strong>.
+        </p>
+        <button onclick="showAnswer('answer2c', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer2c">
+            <h4>Answer:</h4>
+            <p><strong>Application:</strong> Uber</p>
+            <p><strong>Use Cases:</strong></p>
+            <ol>
+                <li><strong>Secure Management Interface for Drivers:</strong> Drivers log into a secure portal to manage their profiles, view earnings, and update availability. The interface requires multi-factor authentication and uses HTTPS for secure communication.</li>
+                <li><strong>Encrypted Data Sharing Between Apps:</strong> The rider's app shares trip details with the driver's app using encrypted communication protocols to ensure data privacy and integrity during transit.</li>
+                <li><strong>Secure API Usage for Payment Processing:</strong> The app communicates with payment gateways via secure APIs that implement tokenization to handle credit card information safely, complying with PCI DSS standards.</li>
+            </ol>
+            <p><strong>Misuse Cases:</strong></p>
+            <ol>
+                <li><strong>Unauthorized Access to Management Interface:</strong> An attacker attempts to gain access to the driver's management portal by exploiting weak passwords or lack of account lockout policies.</li>
+                <li><strong>Interception of Data Between Apps:</strong> An attacker performs a man-in-the-middle attack to intercept trip details shared between rider and driver apps, potentially accessing sensitive information.</li>
+                <li><strong>API Abuse for Unauthorized Transactions:</strong> An attacker exploits vulnerabilities in the payment API to initiate fraudulent transactions or access payment data without proper authorization.</li>
+            </ol>
+            <p>
+                Addressing these misuse cases involves implementing strong authentication mechanisms, encrypting data in transit, validating and sanitizing all API inputs, and employing intrusion detection systems.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h2>Question 3</h2>
+
+        <h3>a. Interpretation of Security Checklist Items (5 marks)</h3>
+        <p>
+            Alex is a new secure software engineer recruited to TikTok, and he was a SLIIT student. He was given the task of upgrading the security of a few components of the TikTok app ecosystem. He initially created a checklist to work with some of the modules. Here is the initial checklist he prepared:
+        </p>
+        <ul>
+            <li>Concurrency</li>
+            <li>Output Sanitization (such as encoding)</li>
+            <li>Error and Exception Handling</li>
+            <li>Input Validation</li>
+            <li>Logging & Auditing</li>
+            <li>Session Management</li>
+            <li>Safe APIs</li>
+            <li>Type Safety</li>
+            <li>Memory Management (e.g., garbage collection, locality)</li>
+            <li>Tokenizing</li>
+            <li>Sandboxing</li>
+            <li>Cryptography (e.g., algorithm selection, encryption, agility, storage declarative versus imperative security)</li>
+        </ul>
+        <p><strong>Select four items from the above list and interpret each one of them.</strong></p>
+        <button onclick="showAnswer('answer3a', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer3a">
+            <h4>Answer:</h4>
+            <ol>
+                <li><strong>Input Validation:</strong>
+                    <p>
+                        Ensuring that all input data is validated before processing. This prevents injection attacks (e.g., SQL injection, cross-site scripting) by checking for expected data types, formats, and acceptable ranges.
+                    </p>
+                </li>
+                <li><strong>Error and Exception Handling:</strong>
+                    <p>
+                        Implementing robust error handling to prevent the application from exposing sensitive information or crashing. This includes catching exceptions, providing user-friendly error messages, and avoiding the display of stack traces or system details.
+                    </p>
+                </li>
+                <li><strong>Logging & Auditing:</strong>
+                    <p>
+                        Recording significant events and user actions within the application. Logs are essential for detecting suspicious activities, troubleshooting issues, and maintaining compliance. Auditing involves reviewing these logs to identify security incidents.
+                    </p>
+                </li>
+                <li><strong>Cryptography:</strong>
+                    <p>
+                        Utilizing encryption algorithms to protect data at rest and in transit. This includes selecting appropriate algorithms (e.g., AES for encryption, SHA-256 for hashing), managing encryption keys securely, and ensuring cryptographic agility to update algorithms as needed.
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <h3>b. Explanation of CWE and OWASP Top 10 (5 marks)</h3>
+        <p>
+            Alex had learned multiple aspects of analyzing code vulnerability using standard practices. Major practices used in the industry are CWE's and OWASP Top 10. Explain those in detail, providing the value addition of following these standard approaches.
+        </p>
+        <button onclick="showAnswer('answer3b', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer3b">
+            <h4>Answer:</h4>
+            <p>
+                <strong>Common Weakness Enumeration (CWE):</strong> CWE is a community-developed list of common software and hardware weaknesses that can lead to vulnerabilities. It provides a common language for describing security flaws, aiding in understanding and mitigating risks.
+            </p>
+            <p>
+                <strong>OWASP Top 10:</strong> The Open Web Application Security Project (OWASP) Top 10 is a list of the most critical web application security risks. It serves as an awareness document, highlighting common vulnerabilities like injection flaws, broken authentication, and cross-site scripting.
+            </p>
+            <p>
+                <strong>Value Addition:</strong>
+            </p>
+            <ul>
+                <li>Provides a standardized framework for identifying and categorizing vulnerabilities.</li>
+                <li>Helps prioritize security efforts by focusing on the most prevalent and severe issues.</li>
+                <li>Facilitates communication among developers, security professionals, and stakeholders.</li>
+                <li>Offers best practices and remediation guidance to improve software security.</li>
+            </ul>
+            <p>
+                By following these standards, organizations can enhance their security posture, reduce the likelihood of breaches, and build more secure applications.
+            </p>
+        </div>
+
+        <h3>c. Covering Responsibilities from TikTok Job Description (5 marks)</h3>
+        <p>
+            In the TikTok job description Alex applied for, the following requirements were listed:
+        </p>
+        <blockquote>
+            <p>
+                <strong>Responsibilities:</strong><br>
+                - Research, design, and implement security properties and architecture solutions based on trusted computing and hardware root-of-trust, which meet internal and external security compliance and standards.<br>
+                - Design and implement new approaches to execution monitoring, remote attestation, code signing, and malware mitigation to help protect our customers.<br>
+                - Develop infrastructure components, libraries, SDKs, and sample applications that enable developers to use trusted computing and hardware-root-of-trust platforms securely with a minimum of effort and, in turn, allow users to deploy, manage, and audit these applications in a simple but flexible and comprehensive manner.<br>
+                - Apply trusted computing and hardware root-of-trust primitives to harden next-generation secure platforms.<br>
+                - Track cutting-edge hardware-based security technologies and land them in TikTok in an effective and pragmatic way.
+            </p>
+        </blockquote>
+        <p><strong>How would you cover these responsibilities? Create a list of best practices.</strong></p>
+        <button onclick="showAnswer('answer3c', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer3c">
+            <h4>Answer:</h4>
+            <ol>
+                <li><strong>Trusted Computing Implementation:</strong>
+                    <p>
+                        Utilize hardware security modules (HSMs) and Trusted Platform Modules (TPMs) to establish a hardware root-of-trust. Implement secure boot processes and measured boot to ensure the integrity of the system from the hardware upward.
+                    </p>
+                </li>
+                <li><strong>Execution Monitoring and Remote Attestation:</strong>
+                    <p>
+                        Develop systems that continuously monitor application execution for anomalies. Implement remote attestation protocols to verify the integrity of devices and software remotely, ensuring they have not been tampered with.
+                    </p>
+                </li>
+                <li><strong>Code Signing and Malware Mitigation:</strong>
+                    <p>
+                        Enforce code signing for all executable code and updates to prevent unauthorized or malicious code from running. Employ advanced malware detection techniques, such as behavior analysis and machine learning models, to identify and block threats.
+                    </p>
+                </li>
+                <li><strong>Developer Enablement:</strong>
+                    <p>
+                        Create comprehensive SDKs, APIs, and documentation to enable developers to integrate security features easily. Provide sample code and tools to simplify the adoption of secure practices.
+                    </p>
+                </li>
+                <li><strong>Continuous Learning and Adoption:</strong>
+                    <p>
+                        Stay updated with the latest hardware-based security technologies. Evaluate and integrate new solutions that enhance security in a practical manner, balancing security benefits with user experience.
+                    </p>
+                </li>
+                <li><strong>Compliance and Standards Alignment:</strong>
+                    <p>
+                        Ensure that all security implementations meet relevant internal policies and external regulations, such as GDPR or ISO 27001. Conduct regular audits and assessments to maintain compliance.
+                    </p>
+                </li>
+                <li><strong>User-Friendly Security Solutions:</strong>
+                    <p>
+                        Design security measures that are transparent to the user or enhance user experience, reducing friction and encouraging adoption of secure practices.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                By following these best practices, Alex can effectively cover the responsibilities outlined in the job description and contribute to enhancing TikTok's security infrastructure.
+            </p>
+        </div>
+
+        <h3>d. Zero-Trust Security Model and Google's Implementation (10 marks)</h3>
+        <p><strong>i. Explain the Zero Trust security implementation. (4 marks)</strong></p>
+        <button onclick="showAnswer('answer3d1', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer3d1">
+            <h4>Answer:</h4>
+            <p>
+                The Zero Trust security model is a framework that operates on the principle of "never trust, always verify." It assumes that threats can originate from inside or outside the network, and thus, no user or device is automatically trusted. Key components include:
+            </p>
+            <ul>
+                <li><strong>Continuous Authentication and Authorization:</strong> Verifying user identity and device health each time access is requested.</li>
+                <li><strong>Least Privilege Access:</strong> Providing users with the minimum level of access required to perform their tasks.</li>
+                <li><strong>Micro-Segmentation:</strong> Dividing networks into small zones to maintain separate access for different parts of the network.</li>
+                <li><strong>Visibility and Analytics:</strong> Monitoring user activity and network traffic to detect anomalies.</li>
+            </ul>
+            <p>
+                Zero Trust enhances security by reducing the attack surface and limiting lateral movement within the network.
+            </p>
+        </div>
+
+        <p><strong>ii. Assess how Google used this concept in their architecture. (6 marks)</strong></p>
+        <button onclick="showAnswer('answer3d2', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer3d2">
+            <h4>Answer:</h4>
+            <p>
+                Google implemented the Zero Trust model through its BeyondCorp initiative, which shifts access controls from the network perimeter to individual devices and users. Key aspects include:
+            </p>
+            <ul>
+                <li><strong>Device and User Authentication:</strong> Every access request is authenticated and authorized based on the user's identity and the device's security posture.</li>
+                <li><strong>Access Control Policies:</strong> Policies are enforced at the application level, granting access based on contextual factors such as user role, device compliance, and location.</li>
+                <li><strong>Encrypted Communication:</strong> All communication between devices and services is encrypted to prevent eavesdropping and data breaches.</li>
+                <li><strong>Continuous Monitoring:</strong> Google's systems continuously monitor for suspicious activity and enforce security policies in real-time.</li>
+                <li><strong>Infrastructure Changes:</strong> Google redesigned its network architecture to support Zero Trust, removing implicit trust based on network location (e.g., being inside the corporate firewall).</li>
+            </ul>
+            <p>
+                By adopting Zero Trust, Google improved its security posture, especially in a cloud-centric and mobile workforce environment. It reduced reliance on VPNs and perimeter defenses, embracing a more flexible and secure access model.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <h2>Question 4 (25 marks)</h2>
+
+        <h3>a. Recommendations for Secure Testing Phase (5 marks)</h3>
+        <p>
+            Alex managed to do many changes for a few TikTok modules using the above implementation technologies. Now his next major duty is to develop secure test cases in the testing phase. Again, as a well-experienced software developer, he created a checklist. Following is the list:
+        </p>
+        <ul>
+            <li>Attack Surface Validation</li>
+            <li>Penetration Testing</li>
+            <li>Fuzzing (e.g., mutated, generated)</li>
+            <li>Scanning (e.g., privacy, content, vulnerability)</li>
+            <li>Simulation Testing (e.g., data and environment)</li>
+            <li>Failure Testing (e.g., break testing, stress testing, fault injection)</li>
+            <li>Cryptographic Validation (e.g., PRNG)</li>
+            <li>Regression Testing</li>
+            <li>Continuous Testing (e.g., synthetic transaction)</li>
+            <li>Unit Testing</li>
+        </ul>
+        <p><strong>Select five (5) and recommend how to implement these in this stage.</strong></p>
+        <button onclick="showAnswer('answer4a', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer4a">
+            <h4>Answer:</h4>
+            <ol>
+                <li><strong>Penetration Testing:</strong>
+                    <p>
+                        Conduct simulated attacks on the TikTok modules to identify vulnerabilities that an attacker could exploit. Use both automated tools and manual testing by security experts to assess the system's defenses.
+                    </p>
+                </li>
+                <li><strong>Fuzzing:</strong>
+                    <p>
+                        Input random, unexpected, or malformed data into the application to discover coding errors and security loopholes. Implement fuzz testing tools that can generate a wide range of inputs and monitor the application for crashes or unexpected behavior.
+                    </p>
+                </li>
+                <li><strong>Regression Testing:</strong>
+                    <p>
+                        After making changes or updates to the modules, perform regression testing to ensure that existing functionalities still work as intended and that no new vulnerabilities have been introduced. Automate these tests where possible to improve efficiency.
+                    </p>
+                </li>
+                <li><strong>Scanning:</strong>
+                    <p>
+                        Use vulnerability scanning tools to detect known security weaknesses in the code, configurations, and dependencies. Include privacy and content scanning to ensure compliance with data protection regulations and content policies.
+                    </p>
+                </li>
+                <li><strong>Unit Testing:</strong>
+                    <p>
+                        Develop unit tests for individual components or functions within the modules to verify that each part operates correctly. Incorporate security assertions to check for potential vulnerabilities, such as improper input handling.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                Implementing these testing methods helps ensure the modules are robust, secure, and function as intended before deployment.
+            </p>
+        </div>
+
+        <h3>b. Bug Tracking and Risk Scoring (5 marks)</h3>
+        <p>
+            Bug tracking and risk scoring are important when you are developing software that is large and has millions of users. Explain what strategies are used by companies like Facebook and Google by using Bug Bounty programs and CVSS scores.
+        </p>
+        <button onclick="showAnswer('answer4b', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer4b">
+            <h4>Answer:</h4>
+            <p>
+                Companies like Facebook and Google employ several strategies for bug tracking and risk scoring:
+            </p>
+            <ul>
+                <li><strong>Bug Bounty Programs:</strong>
+                    <p>
+                        They run bug bounty programs that incentivize external security researchers to find and responsibly disclose vulnerabilities. This extends their security testing capabilities beyond internal teams and helps discover issues that might have been overlooked.
+                    </p>
+                </li>
+                <li><strong>CVSS Scores:</strong>
+                    <p>
+                        The Common Vulnerability Scoring System (CVSS) is used to assess the severity of vulnerabilities. By assigning a CVSS score to each reported issue, they can prioritize remediation efforts based on the potential impact and exploitability.
+                    </p>
+                </li>
+                <li><strong>Bug Tracking Systems:</strong>
+                    <p>
+                        Internally, they use sophisticated bug tracking systems to log, categorize, and track the status of reported vulnerabilities. This ensures that issues are addressed systematically and transparently.
+                    </p>
+                </li>
+                <li><strong>Risk Management Frameworks:</strong>
+                    <p>
+                        Implementing risk management practices allows them to evaluate the likelihood and impact of vulnerabilities, allocate resources effectively, and make informed decisions about patching and disclosures.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                These strategies help maintain high security standards, build trust with users, and contribute to the overall security community.
+            </p>
+        </div>
+
+        <h3>c. Lessons Learned from TikTok Vulnerability Incident (5 marks)</h3>
+        <p>
+            Read the following extract of a TikTok vulnerability discovered by Microsoft:
+        </p>
+        <blockquote>
+            "Microsoft discovered a high-severity vulnerability in the TikTok Android application, which could have allowed attackers to compromise users' accounts with a single click. The vulnerability, which would have required several issues to be chained together to exploit, has been fixed, and we did not locate any evidence of in-the-wild exploitation. Attackers could have leveraged the vulnerability to hijack an account without users' awareness if a targeted user simply clicked a specially crafted link. Attackers could have then accessed and modified users' TikTok profiles and sensitive information, such as by publicizing private videos, sending messages, and uploading videos on behalf of users.
+
+            The vulnerability allowed the app's deeplink verification to be bypassed. Attackers could force the app to load an arbitrary URL to the app's WebView, allowing the URL to then access the WebView's attached JavaScript bridges and grant functionality to attackers. We've previously researched JavaScript bridges for their potential wide-reaching implications. Emphasizing the importance of exercising caution when clicking unknown links, this research also displays how collaboration within the security community is necessary to improve defenses for the overall digital ecosystem."
+        </blockquote>
+        <p><strong>You are Alex. You are really upset about the situation that happened. Distinguish lessons learned from the above scenario.</strong></p>
+        <button onclick="showAnswer('answer4c', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer4c">
+            <h4>Answer:</h4>
+            <p>
+                The incident highlights several key lessons:
+            </p>
+            <ol>
+                <li><strong>Secure Coding Practices:</strong>
+                    <p>
+                        Ensure that deep link verification is robust. Input from external sources like URLs should be thoroughly validated to prevent unauthorized actions.
+                    </p>
+                </li>
+                <li><strong>WebView Security:</strong>
+                    <p>
+                        Be cautious when using WebView components, especially with JavaScript bridges. Limit exposure by disabling unnecessary features and enforcing strict content policies.
+                    </p>
+                </li>
+                <li><strong>Defense in Depth:</strong>
+                    <p>
+                        Implement multiple layers of security so that if one control fails, others will mitigate the risk. In this case, proper validation and restricted permissions could have prevented the exploit chain.
+                    </p>
+                </li>
+                <li><strong>User Awareness:</strong>
+                    <p>
+                        Educate users about the risks of clicking unknown or suspicious links, although relying solely on user caution is not sufficient.
+                    </p>
+                </li>
+                <li><strong>Regular Security Assessments:</strong>
+                    <p>
+                        Conduct frequent security testing, including code reviews and penetration testing, to identify and fix vulnerabilities before they can be exploited.
+                    </p>
+                </li>
+                <li><strong>Collaboration with Security Community:</strong>
+                    <p>
+                        Working with external researchers can enhance security. Promptly addressing reported vulnerabilities helps protect users and improve the application's security posture.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                By learning from this incident, we can strengthen our security practices to prevent similar vulnerabilities in the future.
+            </p>
+        </div>
+
+        <h3>d. Best Practices in Source Code Vulnerability Analysis (10 marks)</h3>
+        <p>
+            Related to your assignment, what are the best practices which you identified in analyzing software vulnerabilities in source code? From the identified vulnerabilities, create a basic scenario as lessons learned from your assignment.
+        </p>
+        <button onclick="showAnswer('answer4d', this)">Show ChatGPT Answer</button>
+        <div class="answer" id="answer4d">
+            <h4>Answer:</h4>
+            <p>
+                **Best Practices Identified:**
+            </p>
+            <ol>
+                <li><strong>Static Code Analysis:</strong>
+                    <p>
+                        Use automated tools to scan source code for known vulnerability patterns and coding errors without executing the code.
+                    </p>
+                </li>
+                <li><strong>Code Reviews:</strong>
+                    <p>
+                        Conduct peer reviews of code to catch issues that automated tools might miss. This includes looking for logic errors and security flaws.
+                    </p>
+                </li>
+                <li><strong>Adherence to Secure Coding Standards:</strong>
+                    <p>
+                        Follow established guidelines like OWASP Secure Coding Practices or CERT Secure Coding Standards to avoid common pitfalls.
+                    </p>
+                </li>
+                <li><strong>Input Validation:</strong>
+                    <p>
+                        Ensure all user inputs are validated and sanitized to prevent injection attacks and other input-related vulnerabilities.
+                    </p>
+                </li>
+                <li><strong>Proper Error Handling:</strong>
+                    <p>
+                        Implement robust error and exception handling to prevent information leakage and application crashes.
+                    </p>
+                </li>
+                <li><strong>Regular Updates and Patching:</strong>
+                    <p>
+                        Keep dependencies and libraries up to date to protect against known vulnerabilities.
+                    </p>
+                </li>
+                <li><strong>Threat Modeling:</strong>
+                    <p>
+                        Analyze the application from an attacker's perspective to identify potential vulnerabilities and their impact.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                **Scenario and Lessons Learned:**
+            </p>
+            <p>
+                During the assignment, I identified a vulnerability where user input was directly concatenated into a SQL query without proper sanitization, leading to a potential SQL injection attack.
+            </p>
+            <p>
+                **Lesson Learned:**
+            </p>
+            <p>
+                This highlighted the critical importance of input validation and the use of parameterized queries or prepared statements. By implementing these practices, we can prevent attackers from manipulating queries and accessing or altering unauthorized data.
+            </p>
+            <p>
+                Additionally, this scenario emphasized the need for secure coding practices to be ingrained in the development process, along with regular code reviews to catch such vulnerabilities early.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
