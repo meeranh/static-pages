@@ -1,378 +1,528 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>SSE Questions and Answers</title>
-    <style>
-        .answer {
-            display: none;
-            margin-left: 20px;
-        }
-        button {
-            margin-top: 10px;
-        }
-        h2 {
-            color: #2e6c80;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #cccccc;
-            margin: 20px 0;
-        }
-    </style>
-    <script>
-			function toggleAnswer(button) {
-					var answerDiv = button.nextElementSibling;
-					var displayStyle = window.getComputedStyle(answerDiv).display;
-					if (displayStyle === "none") {
-							answerDiv.style.display = "block";
-							button.textContent = "Hide ChatGPT Answer";
-					} else {
-							answerDiv.style.display = "none";
-							button.textContent = "Show ChatGPT Answer";
-					}
-			}
-    </script>
+	<title>SSE Questions and Answers</title>
+	<style>
+		button {
+			margin-top: 10px;
+		}
+
+		h2 {
+			color: #2e6c80;
+		}
+
+		hr {
+			border: none;
+			border-top: 1px solid #cccccc;
+			margin: 20px 0;
+		}
+
+		.question {
+			margin-bottom: 20px;
+		}
+
+		.answer {
+			display: none;
+		}
+
+		.correct {
+			background-color: #e0ffe0;
+		}
+	</style>
+	<script>
+		function showAnswer1(button) {
+			document.getElementById('q1_blank1').value = 'Robustness Rules';
+			document.getElementById('q1_blank2').value = 'Compliance Rules';
+		}
+
+		function showAnswer2(button) {
+			document.getElementById('q2_a').value = 'Software Threat Modeling is valuable because it helps identify potential security threats and vulnerabilities early in the development process. This proactive approach allows developers to design and implement security measures to mitigate risks, resulting in more secure software.';
+			document.getElementById('q2_b').value = 'The purpose of an audit in secure software development is to evaluate the effectiveness of security controls and ensure compliance with policies and regulations. Challenges include the complexity of software systems, keeping up with rapid changes, and the difficulty in thoroughly examining all components within limited time frames.';
+			document.getElementById('q2_c').value = 'Availability ensures that systems and data are accessible when needed. From a user\'s perspective, it\'s about accessing services without interruption. For custodians, it involves maintaining system uptime. For owners, it relates to business continuity. The owner\'s perspective can be most critical as it affects the organization\'s overall operations.';
+		}
+
+		function showAnswer3(button) {
+			document.getElementById('q3_ai').value = 'Software Kernels in web development refer to the core components that manage system resources. Understanding kernel operations can enhance security by managing permissions and memory, although direct interaction is limited in web development.';
+			document.getElementById('q3_aii').value = 'Software Reference Monitors enforce access control policies. In web development, they ensure that only authorized users can access certain resources or perform specific actions.';
+			document.getElementById('q3_aiii').value = 'API workflows involve designing APIs with secure authentication, authorization, and input validation to protect data exchange between services.';
+			document.getElementById('q3_b').value = 'Data retention techniques include backups, snapshots, and archival. Challenges involve managing rapidly changing data, ensuring data integrity, and complying with legal requirements. Techniques must be scalable and secure to handle continuous updates.';
+			document.getElementById('q3_ci').value = 'Implementing access controls so that users only access data they need.';
+			document.getElementById('q3_cii').value = 'Ensuring secure communication channels, encryption, and authentication mechanisms.';
+			document.getElementById('q3_ciii').value = 'Regularly testing and patching APIs to protect against known vulnerabilities.';
+			document.getElementById('q3_d').value = 'Separation of duty prevents conflict of interest by dividing tasks among multiple people. For example, developers shouldn\'t deploy code to production. Similar techniques include least privilege and mandatory vacations.';
+		}
+
+		function showAnswer4(button) {
+			document.getElementById('q4_a').value = 'Testing focuses on identifying defects and vulnerabilities through execution of code, while auditing reviews code and processes for compliance with security standards. Testing is dynamic; auditing is static.';
+			document.getElementById('q4_bi').value = 'Considering misuse and abuse cases helps in designing architecture that can withstand malicious activities by anticipating potential attacks.';
+			document.getElementById('q4_bii').value = 'Examples include SQL injection attacks (abuse) or users entering unexpected data formats (misuse).';
+			document.getElementById('q4_c').value = 'A sandbox is an isolated environment for running code securely. Examples include browser sandboxes and virtual machines. Challenges include performance overhead and ensuring complete isolation.';
+			document.getElementById('q4_d').value = 'Testing should simulate resource constraints to ensure the application performs adequately. Network throttling, CPU and memory limits, and database stress tests help identify potential bottlenecks.';
+		}
+
+		function showAnswer5(button) {
+			document.getElementById('q5_a').value = 'For a Defensive Secure Coding project, frameworks like NIST SP800-53 and ISO 27001 are suitable as they provide comprehensive controls for software security.';
+			document.getElementById('q5_b').value = 'Using secure controls is crucial to prevent vulnerabilities, ensure compliance, and protect data integrity and confidentiality.';
+			document.getElementById('q5_c').value = 'STRIDE can help identify potential threats in blockchain applications by categorizing them into Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege.';
+			document.getElementById('q5_d').value = 'ISO 27034 may lack specificity for certain technologies and can be resource-intensive. It\'s important to tailor testing methods to the project\'s needs.';
+			document.getElementById('q5_e').value = 'Yes, through regular audits, assessments, and by implementing compliance frameworks, we can measure and demonstrate adherence to data privacy regulations.';
+		}
+
+		function showAnswer6(button) {
+				document.getElementById('q6_1').value = 'Defense in Depth';
+				document.getElementById('q6_2').value = 'Secure by Default';
+				document.getElementById('q6_3').value = 'Principle of Least Privilege';
+				document.getElementById('q6_4').value = 'Separation of Duties';
+		}
+
+		function showAnswer7(button) {
+			document.getElementById('q7_1').value = 'Information Leakage';
+			document.getElementById('q7_2').value = 'Cross-Site Scripting (XSS)';
+			document.getElementById('q7_3').value = 'File Inclusion Vulnerability';
+			document.getElementById('q7_4').value = 'Insecure Direct Object Reference';
+		}
+
+		function showAnswer8(button) {
+			document.getElementById('q8_1').value = 'Stress Testing';
+			document.getElementById('q8_2').value = 'Unit Testing';
+			document.getElementById('q8_3').value = 'Business Impact Analysis';
+			document.getElementById('q8_4').value = 'Functional Testing';
+			document.getElementById('q8_5').value = 'Integration Testing';
+			document.getElementById('q8_6').value = 'Regression Testing';
+		}
+
+		function showAnswer9(button) {
+				document.getElementById('q9').value = 'd';
+		}
+
+		function showAnswer10(button) {
+				document.getElementById('q10').value = 'b';
+		}
+
+		function showAnswer11(button) {
+			document.getElementById('q11').value = 'a';
+		}
+
+		function showAnswer12(button) {
+			document.getElementById('q12').value = 'a';
+		}
+
+		function showAnswer13(button) {
+			document.getElementById('q13').value = 'e';
+		}
+
+		function showAnswer14(button) {
+			document.getElementById('q14').value = 'c';
+		}
+
+		function showAnswer15(button) {
+			document.getElementById('q15').value = 'a';
+		}
+
+		function showAnswer16(button) {
+			document.getElementById('q16').value = 'a';
+		}
+
+		function showAnswer17(button) {
+			document.getElementById('q17').value = 'd';
+		}
+
+		function showAnswer18(button) {
+			document.getElementById('q18').value = 'd';
+		}
+
+		function showAnswer19(button) {
+			document.getElementById('q19').value = 'b';
+		}
+
+		function showAnswer20(button) {
+			document.getElementById('q20_d').checked = true;
+		}
+	</script>
 </head>
+
 <body>
-    <hr>
-    <h2 id="question-1">Question 1</h2>
-    <p>Fill In The Blanks</p>
-    <p>Which of the following defines minimum techniques to secure each asset in digital rights management (DRM)? [BLANK]</p>
-    <p>Which of the following specifies the required behaviors in digital rights management (DRM)? [BLANK]</p>
-    <p>Possible Answers:</p>
-    <ol>
-        <li>Licensing</li>
-        <li>Compliance Rules</li>
-        <li>Requirements</li>
-        <li>Robustness Rules</li>
-    </ol>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong></p>
-        <p>The first blank: <strong>Robustness Rules</strong></p>
-        <p>The second blank: <strong>Compliance Rules</strong></p>
-    </div>
-    <hr>
-    <h2 id="question-2">Question 2</h2>
-    <p>Your Security Team Should Be Able to Answer,</p>
-    <ul>
-        <li>Who can access data?</li>
-        <li>Where does sensitive data live?</li>
-        <li>How do you protect data?</li>
-        <li>How do you verify that controls and policies are working?</li>
-        <li>Do you have an audit trail of activity?</li>
-    </ul>
-    <p>Above are the common type of questions which can come across a system administrator's mind. Now answer the following questions as a security consultant:</p>
-    <p><strong>a).</strong> How do you find the value of Software Threat Modelling to create better secure software?</p>
-    <p><strong>b).</strong> You are being asked audit questions of what are the major controls which you can use for maintaining the availability of the organization. What is the purpose of an audit in secure software development? Explain the challenges in auditing software?</p>
-    <p><strong>c).</strong> Define what is availability, the perspective of the user, custodian, and the owner. Which availability type of the given stakeholder can be critical?</p>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong></p>
-        <p><strong>a).</strong> Software Threat Modeling is valuable because it helps identify potential security threats and vulnerabilities early in the development process. This proactive approach allows developers to design and implement security measures to mitigate risks, resulting in more secure software.</p>
-        <p><strong>b).</strong> The purpose of an audit in secure software development is to evaluate the effectiveness of security controls and ensure compliance with policies and regulations. Challenges include the complexity of software systems, keeping up with rapid changes, and the difficulty in thoroughly examining all components within limited time frames.</p>
-        <p><strong>c).</strong> Availability ensures that systems and data are accessible when needed. From a user's perspective, it's about accessing services without interruption. For custodians, it involves maintaining system uptime. For owners, it relates to business continuity. The owner's perspective can be most critical as it affects the organization's overall operations.</p>
-    </div>
-    <hr>
-    <h2 id="question-3">Question 3</h2>
-    <p><strong>a).</strong> Following is a list of tools used in secure software development. Explain how these are valid and used in Web Development.</p>
-    <p><strong>i).</strong> Software Kernels</p>
-    <p><strong>ii).</strong> Software Reference Monitors</p>
-    <p><strong>iii).</strong> API workflows</p>
-    <p><strong>b).</strong> With RPO and RTO, a big question is "Data Retention". One of the major challenges would be data retention techniques are getting updates every second. Do a detailed analysis of each technique providing practical examples for each point.</p>
-    <p><strong>c).</strong> In an organization which providing third-party access services to military subsidiaries is done through several APIs. Analyze the above security consideration using the below checklist.</p>
-    <p><strong>i).</strong> Need to Know basis</p>
-    <p><strong>ii).</strong> Technical Security</p>
-    <p><strong>iii).</strong> API vulnerabilities</p>
-    <p><strong>d).</strong> Separation of duty is a tool that can be used in secure development. Explain a case where this technique can be useful. Further define few more similar techniques.</p>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong></p>
-        <p><strong>a).</strong></p>
-        <p><strong>i).</strong> Software Kernels in web development refer to the core components that manage system resources. Understanding kernel operations can enhance security by managing permissions and memory, although direct interaction is limited in web development.</p>
-        <p><strong>ii).</strong> Software Reference Monitors enforce access control policies. In web development, they ensure that only authorized users can access certain resources or perform specific actions.</p>
-        <p><strong>iii).</strong> API workflows involve designing APIs with secure authentication, authorization, and input validation to protect data exchange between services.</p>
-        <p><strong>b).</strong> Data retention techniques include backups, snapshots, and archival. Challenges involve managing rapidly changing data, ensuring data integrity, and complying with legal requirements. Techniques must be scalable and secure to handle continuous updates.</p>
-        <p><strong>c).</strong></p>
-        <p><strong>i).</strong> Implementing access controls so that users only access data they need.</p>
-        <p><strong>ii).</strong> Ensuring secure communication channels, encryption, and authentication mechanisms.</p>
-        <p><strong>iii.</strong> Regularly testing and patching APIs to protect against known vulnerabilities.</p>
-        <p><strong>d).</strong> Separation of duty prevents conflict of interest by dividing tasks among multiple people. For example, developers shouldn't deploy code to production. Similar techniques include least privilege and mandatory vacations.</p>
-    </div>
-    <hr>
-    <h2 id="question-4">Question 4</h2>
-    <p><strong>a.</strong> Testing is one of the key issues for defensive secure code and programming. Explain how testing and auditing can be different once used in secure software development.</p>
-    <p><strong>b.</strong> Testing can be done for misuse and abuse cases,</p>
-    <pre><code>i. Explain how this concept can be viable, once deciding on secure code architecture.
-    
-ii. Provide examples for misuse and abuse cases that are relevant to modern software development.
-</code></pre>
-    <p><strong>c.</strong> What is a sandbox? Provide a few examples of how sandbox can be used to model secure development. What are the challenges of these applications.</p>
-    <p><strong>d.</strong> For IoT and mobile security, testing needs capacity testing due to the performance hits due to limited footprint. Hence explain how Network, CPU, memory, and DB lockdowns need to test for capacity.</p>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong></p>
-        <p><strong>a.</strong> Testing focuses on identifying defects and vulnerabilities through execution of code, while auditing reviews code and processes for compliance with security standards. Testing is dynamic; auditing is static.</p>
-        <p><strong>b.</strong></p>
-        <p><strong>i.</strong> Considering misuse and abuse cases helps in designing architecture that can withstand malicious activities by anticipating potential attacks.</p>
-        <p><strong>ii.</strong> Examples include SQL injection attacks (abuse) or users entering unexpected data formats (misuse).</p>
-        <p><strong>c.</strong> A sandbox is an isolated environment for running code securely. Examples include browser sandboxes and virtual machines. Challenges include performance overhead and ensuring complete isolation.</p>
-        <p><strong>d.</strong> Testing should simulate resource constraints to ensure the application performs adequately. Network throttling, CPU and memory limits, and database stress tests help identify potential bottlenecks.</p>
-    </div>
-    <hr>
-    <h2 id="question-5">Question 5</h2>
-    <p>There is a wide variety of information security and information technology frameworks that provide guidance to appropriate controls to protect the confidentiality, integrity, and availability of data and services (some you might have heard of include NIST SP800-53, NIST Cyber Security Framework, ISO 27001, HITRUST, COBIT, ITIL, CIS Controls, and AICPA Trust Services Criteria). Choosing the correct one depends on your compliance obligations, geography, business vertical, and organizational complexity.</p>
-    <p><strong>a.</strong> Do a thorough analysis of the above which can be suitable for a Defensive Secure Coding project.</p>
-    <p><strong>b.</strong> How important is it to use secure controls in development?</p>
-    <p><strong>c.</strong> How do you think a framework like STRIDE can be of use for a Web 3.0 (Blockchain) Development activity?</p>
-    <p><strong>d.</strong> ISO 27034 uses major testing methods which are in widespread use. Explain the shortcomings of the above method and provide your perspective on the same issue?</p>
-    <p><strong>e.</strong> Are we able to measure and demonstrate compliance with global data privacy regulations?</p>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong></p>
-        <p><strong>a.</strong> For a Defensive Secure Coding project, frameworks like NIST SP800-53 and ISO 27001 are suitable as they provide comprehensive controls for software security.</p>
-        <p><strong>b.</strong> Using secure controls is crucial to prevent vulnerabilities, ensure compliance, and protect data integrity and confidentiality.</p>
-        <p><strong>c.</strong> STRIDE can help identify potential threats in blockchain applications by categorizing them into Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege.</p>
-        <p><strong>d.</strong> ISO 27034 may lack specificity for certain technologies and can be resource-intensive. It's important to tailor testing methods to the project's needs.</p>
-        <p><strong>e.</strong> Yes, through regular audits, assessments, and by implementing compliance frameworks, we can measure and demonstrate adherence to data privacy regulations.</p>
-    </div>
-    <hr>
-    <h2 id="question-6">Question 6</h2>
-    <ol>
-        <li><p>Mitigating the risk of one security control being compromised by providing multiple layers of security controls is an example of what specific security strategy?</p></li>
-        <li><p>Using a custom build process to enable specific features in the Apache Web server is an example of what design principle?</p></li>
-        <li><p>What principle maintains that an individual, process, or other type of entity should be given the minimum privileges and resources for the minimum period of time required to complete a task?</p></li>
-        <li><p>The principle that requires that completion of a specified sensitive activity or access to sensitive objects is dependent on the satisfaction of multiple conditions is:</p></li>
-    </ol>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answers:</strong></p>
-        <ol>
-            <li>Defense in Depth</li>
-            <li>Secure by Default</li>
-            <li>Principle of Least Privilege</li>
-            <li>Separation of Duties</li>
-        </ol>
-    </div>
-    <hr>
-    <h2 id="question-7">Question 7</h2>
-    <ol>
-        <li><p>Which kind of vulnerability may occur when a developer refers to an internal implementation construct?</p></li>
-        <li><p>Which kind of vulnerability may occur when an application takes data that originated from a user and sends it to a Web browser without first validating that content?</p></li>
-        <li><p>Which kind of vulnerability occurs when an application directly uses or concatenates potentially hostile input with file or stream functions?</p></li>
-        <li><p>Which kind of vulnerability may occur when an application only protects sensitive functionality by preventing the display of links to unauthorized users?</p></li>
-    </ol>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answers:</strong></p>
-        <ol>
-            <li>Information Leakage</li>
-            <li>Cross-Site Scripting (XSS)</li>
-            <li>File Inclusion Vulnerability</li>
-            <li>Insecure Direct Object Reference</li>
-        </ol>
-    </div>
-    <hr>
-    <h2 id="question-8">Question 8</h2>
-    <ol>
-        <li><p>Increasing the load on a software system beyond normal operating capacity describes which of the following?</p></li>
-        <li><p>Code written by a developer to test an individual method best describes which of the following?</p></li>
-        <li><p>Analysis of the context of a business decision best describes which of the following?</p></li>
-        <li><p>Which of the following involves validating the positive and negative requirements of the software?</p></li>
-        <li><p>Which of the following evaluates the functionality, reliability, and performance of a group of components?</p></li>
-        <li><p>The testing of a system to verify that modifications have not caused unintended effects is:</p></li>
-    </ol>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answers:</strong></p>
-        <ol>
-            <li>Stress Testing</li>
-            <li>Unit Testing</li>
-            <li>Business Impact Analysis</li>
-            <li>Functional Testing</li>
-            <li>Integration Testing</li>
-            <li>Regression Testing</li>
-        </ol>
-    </div>
-    <hr>
-    <h2 id="question-9">Question 9</h2>
-    <p>Which one of the following groups of states describes the best complete set of states in which data can exist for the purposes of software assurance?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) In storage or "at rest," being created, in motion from one location to another</li>
-        <li>b) In storage or "at rest," in motion from one location to another, being modified or overwritten</li>
-        <li>c) Being created, in motion from one location to another, being modified or overwritten</li>
-        <li>d) In storage or "at rest," being created, in motion from one location to another, being modified or overwritten</li>
-        <li>e) In storage, being created, being modified</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>d)</strong> In storage or "at rest," being created, in motion from one location to another, being modified or overwritten</p>
-    </div>
-    <hr>
-    <h2 id="question-10">Question 10</h2>
-    <p>Which of the following is a process for assessing and documenting the weaknesses or security risks associated with an application?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Control identification</li>
-        <li>b) Threat modeling</li>
-        <li>c) Control prioritization</li>
-        <li>d) Attack surface evaluation</li>
-        <li>e) a and b</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>b)</strong> Threat modeling</p>
-    </div>
-    <hr>
-    <h2 id="question-11">Question 11</h2>
-    <p>Which one of the following refers to the methodologies of securing systems, but are recommended actions only and are not compulsory.</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Guidelines</li>
-        <li>b) Standards</li>
-        <li>c) Procedures</li>
-        <li>d) Control flow</li>
-        <li>e) Baselines</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>a)</strong> Guidelines</p>
-    </div>
-    <hr>
-    <h2 id="question-12">Question 12</h2>
-    <p>In software engineering and systems engineering, what is a description of a system's behavior as it responds to a request that originates from outside of that system?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Use case</li>
-        <li>b) External case</li>
-        <li>c) Abuse case</li>
-        <li>d) Misuse case</li>
-        <li>e) Safe case</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>a)</strong> Use case</p>
-    </div>
-    <hr>
-    <h2 id="question-13">Question 13</h2>
-    <p>Which operational mechanism supports the discovery of both users' and outsiders' repeated attempts to bypass a system's protection mechanisms and allows for discovery of any use of privileges that may occur when a user assumes a functionality with privileges greater than his or her own?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Scanning</li>
-        <li>b) Testing</li>
-        <li>c) Profiling</li>
-        <li>d) All of the mentioned</li>
-        <li>e) Audit</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>e)</strong> Audit</p>
-    </div>
-    <hr>
-    <h2 id="question-14">Question 14</h2>
-    <p>The level of confidence that software functions as intended and is free of vulnerabilities, either intentionally or unintentionally designed or inserted as part of the software, is the definition of:</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Bug-free software</li>
-        <li>b) Software Accountability</li>
-        <li>c) Software Assurance</li>
-        <li>d) Software Impact</li>
-        <li>e) Software risk</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>c)</strong> Software Assurance</p>
-    </div>
-    <hr>
-    <h2 id="question-15">Question 15</h2>
-    <p>Seven complementary elements that support information assurance are confidentiality, integrity, availability, authentication, authorization, accountability, and:</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Auditing</li>
-        <li>b) Repudiation</li>
-        <li>c) Acquisition</li>
-        <li>d) Operations</li>
-        <li>e) All of the mentioned</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>a)</strong> Auditing</p>
-    </div>
-    <hr>
-    <h2 id="question-16">Question 16</h2>
-    <p>A set of records that collectively provides documentary evidence of processing used to aid in tracing from original transactions forward to related records and reports, and/or backward from records and reports to their component source transactions, is called:</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Audit Trail</li>
-        <li>b) Monitor Data</li>
-        <li>c) Data library</li>
-        <li>d) None of the mentioned</li>
-        <li>e) Data Dictionary</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>a)</strong> Audit Trail</p>
-    </div>
-    <hr>
-    <h2 id="question-17">Question 17</h2>
-    <p>What principle maintains that an individual, process, or other type of entity should be given the minimum privileges and resources for the minimum period of time required to complete a task?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Limited access</li>
-        <li>b) Complete mediation</li>
-        <li>c) Separation of duties</li>
-        <li>d) Least privilege</li>
-        <li>e) Economic of mechanism</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>d)</strong> Least privilege</p>
-    </div>
-    <hr>
-    <h2 id="question-18">Question 18</h2>
-    <p>What distinguishes auditing from standard event logging?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) The level of confidentiality applied to the audit records</li>
-        <li>b) The level of integrity applied to the audit records</li>
-        <li>c) The level of availability applied to the audit records</li>
-        <li>d) The type of information captured in the audit record</li>
-        <li>e) The addition of debug information to the audit record</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>d)</strong> The type of information captured in the audit record</p>
-    </div>
-    <hr>
-    <h2 id="question-19">Question 19</h2>
-    <p>Which of the following provides control over the trust features in a software application?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) All of the mentioned</li>
-        <li>b) Security management interfaces</li>
-        <li>c) Application container</li>
-        <li>d) Security manager</li>
-        <li>e) Secure configuration management</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>b)</strong> Security management interfaces</p>
-    </div>
-    <hr>
-    <h2 id="question-20">Question 20</h2>
-    <p>Which one of the following terms is best described by "the inability of a system or component to perform its required functions within specified performance requirements"?</p>
-    <p>Select one:</p>
-    <ul>
-        <li>a) Bug-free</li>
-        <li>b) Error</li>
-        <li>c) Fault</li>
-        <li>d) Failure</li>
-        <li>e) Tested element</li>
-    </ul>
-    <button onclick="toggleAnswer(this)">Show ChatGPT Answer</button>
-    <div class="answer">
-        <p><strong>Answer:</strong> <strong>d)</strong> Failure</p>
-    </div>
+	<hr>
+	<h2 id="question-1">Question 1</h2>
+	<p>Fill In The Blanks</p>
+	<p>Which of the following defines minimum techniques to secure each asset in digital rights management (DRM)? <input
+			type="text" id="q1_blank1"></p>
+	<p>Which of the following specifies the required behaviors in digital rights management (DRM)? <input type="text"
+			id="q1_blank2"></p>
+	<p>Possible Answers:</p>
+	<ol>
+		<li>Licensing</li>
+		<li>Compliance Rules</li>
+		<li>Requirements</li>
+		<li>Robustness Rules</li>
+	</ol>
+	<button onclick="showAnswer1(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-2">Question 2</h2>
+	<p>Your Security Team Should Be Able to Answer,</p>
+	<ul>
+		<li>Who can access data?</li>
+		<li>Where does sensitive data live?</li>
+		<li>How do you protect data?</li>
+		<li>How do you verify that controls and policies are working?</li>
+		<li>Do you have an audit trail of activity?</li>
+	</ul>
+	<p>Above are the common type of questions which can come across a system administrator's mind. Now answer the
+		following questions as a security consultant:</p>
+	<p><strong>a).</strong> How do you find the value of Software Threat Modelling to create better secure software?</p>
+	<textarea id="q2_a" rows="4" cols="80"></textarea>
+	<p><strong>b).</strong> You are being asked audit questions of what are the major controls which you can use for
+		maintaining the availability of the organization. What is the purpose of an audit in secure software development?
+		Explain the challenges in auditing software?</p>
+	<textarea id="q2_b" rows="4" cols="80"></textarea>
+	<p><strong>c).</strong> Define what is availability, the perspective of the user, custodian, and the owner. Which
+		availability type of the given stakeholder can be critical?</p>
+	<textarea id="q2_c" rows="4" cols="80"></textarea>
+	<button onclick="showAnswer2(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-3">Question 3</h2>
+	<p><strong>a).</strong> Following is a list of tools used in secure software development. Explain how these are valid
+		and used in Web Development.</p>
+	<p><strong>i).</strong> Software Kernels</p>
+	<textarea id="q3_ai" rows="2" cols="80"></textarea>
+	<p><strong>ii).</strong> Software Reference Monitors</p>
+	<textarea id="q3_aii" rows="2" cols="80"></textarea>
+	<p><strong>iii).</strong> API workflows</p>
+	<textarea id="q3_aiii" rows="2" cols="80"></textarea>
+	<p><strong>b).</strong> With RPO and RTO, a big question is "Data Retention". One of the major challenges would be
+		data retention techniques are getting updates every second. Do a detailed analysis of each technique providing
+		practical examples for each point.</p>
+	<textarea id="q3_b" rows="4" cols="80"></textarea>
+	<p><strong>c).</strong> In an organization which providing third-party access services to military subsidiaries is
+		done through several APIs. Analyze the above security consideration using the below checklist.</p>
+	<p><strong>i).</strong> Need to Know basis</p>
+	<textarea id="q3_ci" rows="2" cols="80"></textarea>
+	<p><strong>ii).</strong> Technical Security</p>
+	<textarea id="q3_cii" rows="2" cols="80"></textarea>
+	<p><strong>iii).</strong> API vulnerabilities</p>
+	<textarea id="q3_ciii" rows="2" cols="80"></textarea>
+	<p><strong>d).</strong> Separation of duty is a tool that can be used in secure development. Explain a case where this
+		technique can be useful. Further define few more similar techniques.</p>
+	<textarea id="q3_d" rows="4" cols="80"></textarea>
+	<button onclick="showAnswer3(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-4">Question 4</h2>
+	<p><strong>a.</strong> Testing is one of the key issues for defensive secure code and programming. Explain how testing
+		and auditing can be different once used in secure software development.</p>
+	<textarea id="q4_a" rows="4" cols="80"></textarea>
+	<p><strong>b.</strong> Testing can be done for misuse and abuse cases,</p>
+	<p><strong>i.</strong> Explain how this concept can be viable, once deciding on secure code architecture.</p>
+	<textarea id="q4_bi" rows="3" cols="80"></textarea>
+	<p><strong>ii.</strong> Provide examples for misuse and abuse cases that are relevant to modern software development.
+	</p>
+	<textarea id="q4_bii" rows="3" cols="80"></textarea>
+	<p><strong>c.</strong> What is a sandbox? Provide a few examples of how sandbox can be used to model secure
+		development. What are the challenges of these applications.</p>
+	<textarea id="q4_c" rows="4" cols="80"></textarea>
+	<p><strong>d.</strong> For IoT and mobile security, testing needs capacity testing due to the performance hits due to
+		limited footprint. Hence explain how Network, CPU, memory, and DB lockdowns need to test for capacity.</p>
+	<textarea id="q4_d" rows="4" cols="80"></textarea>
+	<button onclick="showAnswer4(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-5">Question 5</h2>
+	<p>There is a wide variety of information security and information technology frameworks that provide guidance to
+		appropriate controls to protect the confidentiality, integrity, and availability of data and services (some you
+		might have heard of include NIST SP800-53, NIST Cyber Security Framework, ISO 27001, HITRUST, COBIT, ITIL, CIS
+		Controls, and AICPA Trust Services Criteria). Choosing the correct one depends on your compliance obligations,
+		geography, business vertical, and organizational complexity.</p>
+	<p><strong>a.</strong> Do a thorough analysis of the above which can be suitable for a Defensive Secure Coding
+		project.</p>
+	<textarea id="q5_a" rows="4" cols="80"></textarea>
+	<p><strong>b.</strong> How important is it to use secure controls in development?</p>
+	<textarea id="q5_b" rows="3" cols="80"></textarea>
+	<p><strong>c.</strong> How do you think a framework like STRIDE can be of use for a Web 3.0 (Blockchain) Development
+		activity?</p>
+	<textarea id="q5_c" rows="3" cols="80"></textarea>
+	<p><strong>d.</strong> ISO 27034 uses major testing methods which are in widespread use. Explain the shortcomings of
+		the above method and provide your perspective on the same issue?</p>
+	<textarea id="q5_d" rows="4" cols="80"></textarea>
+	<p><strong>e.</strong> Are we able to measure and demonstrate compliance with global data privacy regulations?</p>
+	<textarea id="q5_e" rows="2" cols="80"></textarea>
+	<button onclick="showAnswer5(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-6">Question 6</h2>
+	<ol>
+		<li>
+			<p>Mitigating the risk of one security control being compromised by providing multiple layers of security controls
+				is an example of what specific security strategy?</p>
+			<input type="text" id="q6_1">
+		</li>
+		<li>
+			<p>Using a custom build process to enable specific features in the Apache Web server is an example of what design
+				principle?</p>
+			<input type="text" id="q6_2">
+		</li>
+		<li>
+			<p>What principle maintains that an individual, process, or other type of entity should be given the minimum
+				privileges and resources for the minimum period of time required to complete a task?</p>
+			<input type="text" id="q6_3">
+		</li>
+		<li>
+			<p>The principle that requires that completion of a specified sensitive activity or access to sensitive objects is
+				dependent on the satisfaction of multiple conditions is:</p>
+			<input type="text" id="q6_4">
+		</li>
+	</ol>
+	<button onclick="showAnswer6(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 7 -->
+	<h2 id="question-7">Question 7</h2>
+	<ol>
+		<li>
+			<p>Which kind of vulnerability may occur when a developer refers to an internal implementation construct?</p>
+			<input type="text" id="q7_1">
+		</li>
+		<li>
+			<p>Which kind of vulnerability may occur when an application takes data that originated from a user and sends it
+				to a Web browser without first validating that content?</p>
+			<input type="text" id="q7_2">
+		</li>
+		<li>
+			<p>Which kind of vulnerability occurs when an application directly uses or concatenates potentially hostile input
+				with file or stream functions?</p>
+			<input type="text" id="q7_3">
+		</li>
+		<li>
+			<p>Which kind of vulnerability may occur when an application only protects sensitive functionality by preventing
+				the display of links to unauthorized users?</p>
+			<input type="text" id="q7_4">
+		</li>
+	</ol>
+	<button onclick="showAnswer7(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 8 -->
+	<h2 id="question-8">Question 8</h2>
+	<ol>
+		<li>
+			<p>Increasing the load on a software system beyond normal operating capacity describes which of the following?</p>
+			<input type="text" id="q8_1">
+		</li>
+		<li>
+			<p>Code written by a developer to test an individual method best describes which of the following?</p>
+			<input type="text" id="q8_2">
+		</li>
+		<li>
+			<p>Analysis of the context of a business decision best describes which of the following?</p>
+			<input type="text" id="q8_3">
+		</li>
+		<li>
+			<p>Which of the following involves validating the positive and negative requirements of the software?</p>
+			<input type="text" id="q8_4">
+		</li>
+		<li>
+			<p>Which of the following evaluates the functionality, reliability, and performance of a group of components?</p>
+			<input type="text" id="q8_5">
+		</li>
+		<li>
+			<p>The testing of a system to verify that modifications have not caused unintended effects is:</p>
+			<input type="text" id="q8_6">
+		</li>
+	</ol>
+	<button onclick="showAnswer8(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-9">Question 9</h2>
+	<p>Which one of the following groups of states describes the best complete set of states in which data can exist for
+		the purposes of software assurance?</p>
+	<p>Select one:</p>
+	<select id="q9">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) In storage or "at rest," being created, in motion from one location to another</option>
+		<option value="b">b) In storage or "at rest," in motion from one location to another, being modified or overwritten
+		</option>
+		<option value="c">c) Being created, in motion from one location to another, being modified or overwritten</option>
+		<option value="d">d) In storage or "at rest," being created, in motion from one location to another, being modified
+			or overwritten</option>
+		<option value="e">e) In storage, being created, being modified</option>
+	</select>
+	<button onclick="showAnswer9(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-10">Question 10</h2>
+	<p>Which of the following is a process for assessing and documenting the weaknesses or security risks associated with
+		an application?</p>
+	<p>Select one:</p>
+	<select id="q10">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Control identification</option>
+		<option value="b">b) Threat modeling</option>
+		<option value="c">c) Control prioritization</option>
+		<option value="d">d) Attack surface evaluation</option>
+		<option value="e">e) a and b</option>
+	</select>
+	<button onclick="showAnswer10(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 11 -->
+	<h2 id="question-11">Question 11</h2>
+	<p>Which one of the following refers to the methodologies of securing systems, but are recommended actions only and
+		are not compulsory.</p>
+	<p>Select one:</p>
+	<select id="q11">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Guidelines</option>
+		<option value="b">b) Standards</option>
+		<option value="c">c) Procedures</option>
+		<option value="d">d) Control flow</option>
+		<option value="e">e) Baselines</option>
+	</select>
+	<button onclick="showAnswer11(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 12 -->
+	<h2 id="question-12">Question 12</h2>
+	<p>In software engineering and systems engineering, what is a description of a system's behavior as it responds to a
+		request that originates from outside of that system?</p>
+	<p>Select one:</p>
+	<select id="q12">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Use case</option>
+		<option value="b">b) External case</option>
+		<option value="c">c) Abuse case</option>
+		<option value="d">d) Misuse case</option>
+		<option value="e">e) Safe case</option>
+	</select>
+	<button onclick="showAnswer12(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 13 -->
+	<h2 id="question-13">Question 13</h2>
+	<p>Which operational mechanism supports the discovery of both users' and outsiders' repeated attempts to bypass a
+		system's protection mechanisms and allows for discovery of any use of privileges that may occur when a user assumes
+		a functionality with privileges greater than his or her own?</p>
+	<p>Select one:</p>
+	<select id="q13">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Scanning</option>
+		<option value="b">b) Testing</option>
+		<option value="c">c) Profiling</option>
+		<option value="d">d) All of the mentioned</option>
+		<option value="e">e) Audit</option>
+	</select>
+	<button onclick="showAnswer13(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 14 -->
+	<h2 id="question-14">Question 14</h2>
+	<p>The level of confidence that software functions as intended and is free of vulnerabilities, either intentionally or
+		unintentionally designed or inserted as part of the software, is the definition of:</p>
+	<p>Select one:</p>
+	<select id="q14">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Bug-free software</option>
+		<option value="b">b) Software Accountability</option>
+		<option value="c">c) Software Assurance</option>
+		<option value="d">d) Software Impact</option>
+		<option value="e">e) Software risk</option>
+	</select>
+	<button onclick="showAnswer14(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 15 -->
+	<h2 id="question-15">Question 15</h2>
+	<p>Seven complementary elements that support information assurance are confidentiality, integrity, availability,
+		authentication, authorization, accountability, and:</p>
+	<p>Select one:</p>
+	<select id="q15">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Auditing</option>
+		<option value="b">b) Repudiation</option>
+		<option value="c">c) Acquisition</option>
+		<option value="d">d) Operations</option>
+		<option value="e">e) All of the mentioned</option>
+	</select>
+	<button onclick="showAnswer15(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 16 -->
+	<h2 id="question-16">Question 16</h2>
+	<p>A set of records that collectively provides documentary evidence of processing used to aid in tracing from original
+		transactions forward to related records and reports, and/or backward from records and reports to their component
+		source transactions, is called:</p>
+	<p>Select one:</p>
+	<select id="q16">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Audit Trail</option>
+		<option value="b">b) Monitor Data</option>
+		<option value="c">c) Data library</option>
+		<option value="d">d) None of the mentioned</option>
+		<option value="e">e) Data Dictionary</option>
+	</select>
+	<button onclick="showAnswer16(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 17 -->
+	<h2 id="question-17">Question 17</h2>
+	<p>What principle maintains that an individual, process, or other type of entity should be given the minimum
+		privileges and resources for the minimum period of time required to complete a task?</p>
+	<p>Select one:</p>
+	<select id="q17">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) Limited access</option>
+		<option value="b">b) Complete mediation</option>
+		<option value="c">c) Separation of duties</option>
+		<option value="d">d) Least privilege</option>
+		<option value="e">e) Economic of mechanism</option>
+	</select>
+	<button onclick="showAnswer17(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 18 -->
+	<h2 id="question-18">Question 18</h2>
+	<p>What distinguishes auditing from standard event logging?</p>
+	<p>Select one:</p>
+	<select id="q18">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) The level of confidentiality applied to the audit records</option>
+		<option value="b">b) The level of integrity applied to the audit records</option>
+		<option value="c">c) The level of availability applied to the audit records</option>
+		<option value="d">d) The type of information captured in the audit record</option>
+		<option value="e">e) The addition of debug information to the audit record</option>
+	</select>
+	<button onclick="showAnswer18(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<!-- Question 19 -->
+	<h2 id="question-19">Question 19</h2>
+	<p>Which of the following provides control over the trust features in a software application?</p>
+	<p>Select one:</p>
+	<select id="q19">
+		<option value="">--Select an answer--</option>
+		<option value="a">a) All of the mentioned</option>
+		<option value="b">b) Security management interfaces</option>
+		<option value="c">c) Application container</option>
+		<option value="d">d) Security manager</option>
+		<option value="e">e) Secure configuration management</option>
+	</select>
+	<button onclick="showAnswer19(this)">Show ChatGPT Answer</button>
+	<hr>
+
+	<h2 id="question-20">Question 20</h2>
+	<p>Which one of the following terms is best described by "the inability of a system or component to perform its
+		required functions within specified performance requirements"?</p>
+	<p>Select one:</p>
+	<ul>
+		<li><input type="radio" name="q20" id="q20_a" value="a"> a) Bug-free</li>
+		<li><input type="radio" name="q20" id="q20_b" value="b"> b) Error</li>
+		<li><input type="radio" name="q20" id="q20_c" value="c"> c) Fault</li>
+		<li><input type="radio" name="q20" id="q20_d" value="d"> d) Failure</li>
+		<li><input type="radio" name="q20" id="q20_e" value="e"> e) Tested element</li>
+	</ul>
+	<button onclick="showAnswer20(this)">Show ChatGPT Answer</button>
+	<hr>
 </body>
+
 </html>
