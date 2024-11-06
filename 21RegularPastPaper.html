@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: #2e6c80;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #cccccc;
+            margin: 20px 0;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-left: 20px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function showAnswer1(button) {
+            document.getElementById('q1_e').checked = true;
+        }
+
+        function showAnswer2(button) {
+            document.getElementById('q2_d').checked = true;
+        }
+
+        function showAnswer3(button) {
+            document.getElementById('q3').value = 'Information Leakage';
+        }
+
+        function showAnswer4(button) {
+            document.getElementById('q4_d').checked = true;
+        }
+
+        function showAnswer5(button) {
+            document.getElementById('q5_d').checked = true;
+        }
+
+        function showAnswer6(button) {
+            document.getElementById('q6_c').checked = true;
+        }
+
+        function showAnswer7(button) {
+            document.getElementById('q7_d').checked = true;
+        }
+
+        function showAnswer8(button) {
+            document.getElementById('q8_d').checked = true;
+        }
+
+        function showAnswer9(button) {
+            document.getElementById('q9_d').checked = true;
+        }
+
+        function showAnswer10(button) {
+            document.getElementById('q10_c').checked = true;
+        }
+
+				function showAnswer11(button) {
+						document.getElementById('q11').value = 'Robustness rules';
+				}
+
+        function showAnswer12(button) {
+            document.getElementById('q12').value = 'Stress Testing';
+        }
+
+        function showAnswer13(button) {
+            document.getElementById('q13_a').checked = true;
+        }
+
+        function showAnswer14(button) {
+            document.getElementById('q14_a').checked = true;
+        }
+
+        function showAnswer15(button) {
+            document.getElementById('q15_b').checked = true;
+        }
+
+        function showAnswer16(button) {
+            document.getElementById('q16_b').checked = true;
+        }
+
+        function showAnswer17(button) {
+            document.getElementById('q17_d').checked = true;
+        }
+
+        function showAnswer18(button) {
+            document.getElementById('q18').value = 'Complete Mediation';
+        }
+
+        function showAnswer19(button) {
+            document.getElementById('q19').value = 'Defense in Depth';
+        }
+
+				function showAnswer20(button) {
+						document.getElementById('q20').value = 'Defense in Depth';
+				}
+
+				function showAnswer21(button) {
+						alert('As a Secure Software Architect, these questions help ensure data security and compliance within the organization.');
+				}
+
+
+				function showAnswer22(button) {
+						document.getElementById('q22').value = 'Tools like static code analysis, automated testing frameworks, and vulnerability scanners can help identify and mitigate security risks in large software systems like Google. They assist in maintaining code quality, detecting potential vulnerabilities, and ensuring compliance with security standards.';
+				}
+
+				function showAnswer23(button) {
+						document.getElementById('q23').value = 'Major methods of secure testing include penetration testing, code review, static and dynamic analysis, fuzz testing, and security regression testing. These methods help identify vulnerabilities and ensure that the application is secure against various attack vectors.';
+				}
+
+				function showAnswer24(button) {
+						document.getElementById('q24').value = 'Information security frameworks like NIST, ISO 27001, and CIS Controls provide guidelines for implementing security controls. For a project focused on confidentiality, integrity, and availability, selecting a framework depends on compliance requirements, industry standards, and organizational needs.';
+				}
+    </script>
+</head>
+<body>
+    <h1>2021 Regular SSE Past Paper (answered by ChatGPT o1)</h1>
+    <hr>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <h2>Question 1</h2>
+        <p><strong>What distinguishes auditing from standard event logging?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q1" id="q1_a"> a) The level of integrity applied to the audit records</label><br>
+            <label><input type="radio" name="q1" id="q1_b"> b) The level of availability applied to the audit records</label><br>
+            <label><input type="radio" name="q1" id="q1_c"> c) The level of confidentiality applied to the audit records</label><br>
+            <label><input type="radio" name="q1" id="q1_d"> d) The addition of debug information to the audit records</label><br>
+            <label><input type="radio" name="q1" id="q1_e"> e) The type of information captured in the audit record</label>
+        </div>
+        <button onclick="showAnswer1(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h2>Question 2</h2>
+        <p><strong>A set of records that collectively provides documentary evidence of processing used to aid in tracing from original transactions forward to related records and reports, and/or backward from records and reports to their component source transactions, is called:</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q2" id="q2_a"> a) Data Dictionary</label><br>
+            <label><input type="radio" name="q2" id="q2_b"> b) Monitor Data</label><br>
+            <label><input type="radio" name="q2" id="q2_c"> c) Data Library</label><br>
+            <label><input type="radio" name="q2" id="q2_d"> d) Audit Trail</label>
+        </div>
+        <button onclick="showAnswer2(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h2>Question 3</h2>
+        <p><strong>Which kind of vulnerability may occur when a developer refers to an internal implementation construct?</strong></p>
+        <select id="q3">
+            <option value="">--Select an answer--</option>
+            <option value="Information Leakage">Information Leakage</option>
+            <option value="Cross-Site Scripting (XSS)">Cross-Site Scripting (XSS)</option>
+            <option value="File Inclusion Vulnerability">File Inclusion Vulnerability</option>
+            <option value="Insecure Direct Object Reference">Insecure Direct Object Reference</option>
+        </select>
+        <button onclick="showAnswer3(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <h2>Question 4</h2>
+        <p><strong>In software engineering and systems engineering, what is a description of a system’s behavior as it responds to a request that originates from outside of that system?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q4" id="q4_a"> a) External case</label><br>
+            <label><input type="radio" name="q4" id="q4_b"> b) Abuse case</label><br>
+            <label><input type="radio" name="q4" id="q4_c"> c) Misuse case</label><br>
+            <label><input type="radio" name="q4" id="q4_d"> d) Use case</label><br>
+            <label><input type="radio" name="q4" id="q4_e"> e) Safe case</label>
+        </div>
+        <button onclick="showAnswer4(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <h2>Question 5</h2>
+        <p><strong>Which one of the following terms is best described by "the inability of a system or component to perform its required functions within specified performance requirements"?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q5" id="q5_a"> a) Fault</label><br>
+            <label><input type="radio" name="q5" id="q5_b"> b) Tested element</label><br>
+            <label><input type="radio" name="q5" id="q5_c"> c) Error</label><br>
+            <label><input type="radio" name="q5" id="q5_d"> d) Failure</label><br>
+            <label><input type="radio" name="q5" id="q5_e"> e) Bug-free</label>
+        </div>
+        <button onclick="showAnswer5(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <h2>Question 6</h2>
+        <p><strong>Which operational mechanism supports the discovery of both users’ and outsiders’ repeated attempts to bypass a system’s protection mechanisms and allows for discovery of any use of privileges that may occur when a user assumes a functionality with privileges greater than his or her own?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q6" id="q6_a"> a) Scanning</label><br>
+            <label><input type="radio" name="q6" id="q6_b"> b) Testing</label><br>
+            <label><input type="radio" name="q6" id="q6_c"> c) Audit</label><br>
+            <label><input type="radio" name="q6" id="q6_d"> d) Profiling</label><br>
+            <label><input type="radio" name="q6" id="q6_e"> e) All of the mentioned</label>
+        </div>
+        <button onclick="showAnswer6(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <h2>Question 7</h2>
+        <p><strong>Seven complementary elements that support information assurance are confidentiality, integrity, availability, authentication, authorization, accountability, and:</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q7" id="q7_a"> a) Operations</label><br>
+            <label><input type="radio" name="q7" id="q7_b"> b) Acquisition</label><br>
+            <label><input type="radio" name="q7" id="q7_c"> c) All of the mentioned</label><br>
+            <label><input type="radio" name="q7" id="q7_d"> d) Auditing</label><br>
+            <label><input type="radio" name="q7" id="q7_e"> e) Repudiation</label>
+        </div>
+        <button onclick="showAnswer7(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <h2>Question 8</h2>
+        <p><strong>Which one of the following groups of states describes the best complete set of states in which data can exist for the purposes of software assurance?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q8" id="q8_a"> a) In storage, being created, being modified</label><br>
+            <label><input type="radio" name="q8" id="q8_b"> b) Being created, in motion from one location to another, being modified or overwritten</label><br>
+            <label><input type="radio" name="q8" id="q8_c"> c) In storage or "at rest," being created, in motion from one location to another</label><br>
+            <label><input type="radio" name="q8" id="q8_d"> d) In storage or "at rest," being created, in motion from one location to another, being modified or overwritten</label><br>
+            <label><input type="radio" name="q8" id="q8_e"> e) In storage or "at rest," in motion from one location to another, being modified or overwritten</label>
+        </div>
+        <button onclick="showAnswer8(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <h2>Question 9</h2>
+        <p><strong>Data loss prevention (DLP) technology may take the following action when it detects a policy violation:</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q9" id="q9_a"> a) Reconstruct the session</label><br>
+            <label><input type="radio" name="q9" id="q9_b"> b) Encrypt the data</label><br>
+            <label><input type="radio" name="q9" id="q9_c"> c) Hash the data</label><br>
+            <label><input type="radio" name="q9" id="q9_d"> d) Analyze the content</label><br>
+            <label><input type="radio" name="q9" id="q9_e"> e) Delete the data</label>
+        </div>
+        <button onclick="showAnswer9(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <h2>Question 10</h2>
+        <p><strong>A means of validating the origin and integrity of software is:</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q10" id="q10_a"> a) Robustness rules</label><br>
+            <label><input type="radio" name="q10" id="q10_b"> b) Digital rights management</label><br>
+            <label><input type="radio" name="q10" id="q10_c"> c) Code signing</label><br>
+            <label><input type="radio" name="q10" id="q10_d"> d) Encryption</label><br>
+            <label><input type="radio" name="q10" id="q10_e"> e) Compliance rules</label>
+        </div>
+        <button onclick="showAnswer10(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 11 -->
+    <div class="question">
+        <h2>Question 11</h2>
+        <p><strong>Which of the following defines minimum techniques to secure each asset in digital rights management (DRM)?</strong></p>
+        <select id="q11">
+            <option value="">--Select an answer--</option>
+            <option value="Compliance rules">Compliance rules</option>
+            <option value="Robustness rules">Robustness rules</option>
+            <option value="Requirements">Requirements</option>
+            <option value="Licensing">Licensing</option>
+        </select>
+        <button onclick="showAnswer11(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 12 -->
+    <div class="question">
+        <h2>Question 12</h2>
+        <p><strong>Increasing the load on a software system beyond normal operating capacity describes which of the following?</strong></p>
+        <select id="q12">
+            <option value="">--Select an answer--</option>
+            <option value="Stress Testing">Stress Testing</option>
+            <option value="Load Testing">Load Testing</option>
+            <option value="Unit Testing">Unit Testing</option>
+            <option value="Integration Testing">Integration Testing</option>
+        </select>
+        <button onclick="showAnswer12(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 13 -->
+    <div class="question">
+        <h2>Question 13</h2>
+        <p><strong>Which of the following provides control over the trust features in a software application?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q13" id="q13_a"> a) Security management interfaces</label><br>
+            <label><input type="radio" name="q13" id="q13_b"> b) Secure configuration management</label><br>
+            <label><input type="radio" name="q13" id="q13_c"> c) Application container</label><br>
+            <label><input type="radio" name="q13" id="q13_d"> d) All of the mentioned</label><br>
+            <label><input type="radio" name="q13" id="q13_e"> e) Security manager</label>
+        </div>
+        <button onclick="showAnswer13(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 14 -->
+    <div class="question">
+        <h2>Question 14</h2>
+        <p><strong>Which one of the following refers to the methodologies of securing systems, but are recommended actions only and are not compulsory?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q14" id="q14_a"> a) Guidelines</label><br>
+            <label><input type="radio" name="q14" id="q14_b"> b) Control flow</label><br>
+            <label><input type="radio" name="q14" id="q14_c"> c) Procedures</label><br>
+            <label><input type="radio" name="q14" id="q14_d"> d) Standards</label><br>
+            <label><input type="radio" name="q14" id="q14_e"> e) Baselines</label>
+        </div>
+        <button onclick="showAnswer14(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 15 -->
+    <div class="question">
+        <h2>Question 15</h2>
+        <p><strong>Which of the following is a process for assessing and documenting the weaknesses or security risks associated with an application?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q15" id="q15_a"> a) Control identification</label><br>
+            <label><input type="radio" name="q15" id="q15_b"> b) Threat modeling</label><br>
+            <label><input type="radio" name="q15" id="q15_c"> c) Control prioritization</label><br>
+            <label><input type="radio" name="q15" id="q15_d"> d) Attack surface evaluation</label><br>
+            <label><input type="radio" name="q15" id="q15_e"> e) a and b</label>
+        </div>
+        <button onclick="showAnswer15(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 16 -->
+    <div class="question">
+        <h2>Question 16</h2>
+        <p><strong>Which one of the following provides guidance and metrics for conducting security tests and has test cases that are divided into five channels (sections)?</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q16" id="q16_a"> a) ISO 27084</label><br>
+            <label><input type="radio" name="q16" id="q16_b"> b) OSSTMM</label><br>
+            <label><input type="radio" name="q16" id="q16_c"> c) SSE-CMM</label><br>
+            <label><input type="radio" name="q16" id="q16_d"> d) CMMI</label><br>
+            <label><input type="radio" name="q16" id="q16_e"> e) ISO 27001</label>
+        </div>
+        <button onclick="showAnswer16(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 17 -->
+    <div class="question">
+        <h2>Question 17</h2>
+        <p><strong>The level of confidence that software functions as intended and is free of vulnerabilities, either intentionally or unintentionally designed or inserted as part of the software, is the definition of:</strong></p>
+        <div class="answers">
+            <label><input type="radio" name="q17" id="q17_a"> a) Software Impact</label><br>
+            <label><input type="radio" name="q17" id="q17_b"> b) Bug-free software</label><br>
+            <label><input type="radio" name="q17" id="q17_c"> c) Software risk</label><br>
+            <label><input type="radio" name="q17" id="q17_d"> d) Software Assurance</label><br>
+            <label><input type="radio" name="q17" id="q17_e"> e) Software Accountability</label>
+        </div>
+        <button onclick="showAnswer17(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 18 -->
+    <div class="question">
+        <h2>Question 18</h2>
+        <p><strong>What principle maintains that an individual, process, or other type of entity should be given the minimum privileges and resources for the minimum period of time required to complete a task?</strong></p>
+        <select id="q18">
+            <option value="">--Select an answer--</option>
+            <option value="Limited access">Limited access</option>
+            <option value="Economic of mechanism">Economic of mechanism</option>
+            <option value="Least Privilege">Least Privilege</option>
+            <option value="Complete Mediation">Complete Mediation</option>
+            <option value="Separation of duties">Separation of duties</option>
+        </select>
+        <button onclick="showAnswer18(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 19 -->
+    <div class="question">
+        <h2>Question 19</h2>
+        <p><strong>The condition that every request by a subject to access an object in a computer system must undergo a valid and effective authorization procedure, and must not be suspended or become capable of being bypassed. This design concept is known as:</strong></p>
+        <select id="q19">
+            <option value="">--Select an answer--</option>
+            <option value="Open Design">Open Design</option>
+            <option value="Complete Mediation">Complete Mediation</option>
+            <option value="Least Privilege">Least Privilege</option>
+            <option value="Defense in Depth">Defense in Depth</option>
+            <option value="Economy of Mechanism">Economy of Mechanism</option>
+        </select>
+        <button onclick="showAnswer19(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Question 20 -->
+    <div class="question">
+        <h2>Question 20</h2>
+        <p><strong>Mitigating the risk of one security control being compromised by providing multiple layers of security controls is an example of what specific security strategy?</strong></p>
+        <select id="q20">
+            <option value="">--Select an answer--</option>
+            <option value="Defense in Depth">Defense in Depth</option>
+            <option value="Least Privilege">Least Privilege</option>
+            <option value="Separation of Duties">Separation of Duties</option>
+            <option value="Fail-Safe Defaults">Fail-Safe Defaults</option>
+            <option value="Open Design">Open Design</option>
+        </select>
+        <button onclick="showAnswer20(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <!-- Questions 22-24 are extended response questions -->
+    <div class="question">
+        <h2>Question 22</h2>
+        <p><strong>Google is one of the biggest software systems in the universe. Most of the internal secure engineering practices can be hard, at the same time vulnerable. How would the following tools be of use in a software product like Google?</strong></p>
+        <textarea id="q22" rows="5" cols="100"></textarea>
+        <button onclick="showAnswer22(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <div class="question">
+        <h2>Question 23</h2>
+        <p><strong>Testing is one of the key issues for defensive secure code and programming. Explain a few major methods of secure testing.</strong></p>
+        <textarea id="q23" rows="5" cols="100"></textarea>
+        <button onclick="showAnswer23(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+
+    <div class="question">
+        <h2>Question 24</h2>
+        <p><strong>There is a wide variety of information security and information technology frameworks that provide guidance to appropriate controls to protect the confidentiality, integrity, and availability of data and services.</strong></p>
+        <p><strong>Extended response question about information security frameworks and compliance.</strong></p>
+        <textarea id="q24" rows="5" cols="100"></textarea>
+        <button onclick="showAnswer24(this)">Show ChatGPT Answer</button>
+    </div>
+    <hr>
+</body>
+</html>
