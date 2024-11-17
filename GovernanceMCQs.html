@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>IT Governance Quiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 20px;
+		}
+
+		.quiz-container {
+			max-width: 800px;
+			margin: auto;
+			background: #fff;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		.question-block {
+			margin-bottom: 30px;
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 20px;
+		}
+
+		.question-block:last-child {
+			border-bottom: none;
+		}
+
+		.question-number {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.question-text {
+			margin-bottom: 15px;
+		}
+
+		.answers {
+			list-style: none;
+			padding: 0;
+		}
+
+		.answers li {
+			margin-bottom: 10px;
+		}
+
+		.show-answer-btn {
+			margin-top: 10px;
+			padding: 8px 15px;
+			background-color: #007BFF;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.show-answer-btn:hover {
+			background-color: #0056b3;
+		}
+
+		@media (max-width: 600px) {
+			body {
+				padding: 10px;
+			}
+
+			.quiz-container {
+				padding: 15px;
+			}
+
+			.show-answer-btn {
+				width: 100%;
+			}
+		}
+
+		a {
+			color: #007BFF;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		a:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+
+
+		em,
+		i {
+			font-style: italic;
+			font-size: 0.95em;
+			color: #555;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="quiz-container">
+		<h1>GCLC Governance: Practice MCQs</h1>
+
+		<!-- For Navigation -->
+		<h2><i>Navigation</i></h2>
+		<ul>
+			<li><a href="#lecture1">Lecture 1: Introduction to IT Governance</a> <i>(10 questions)</i></li>
+			<li><a href="#lecture2">Lecture 2: IT Governance Frameworks & Key Elements</a> <i>(15 questions)</i></li>
+			<li><a href="#lecture3">Lecture 3: ITG Controls, Communications, and Change</a> <i>(15 questions)</i></li>
+			<li><a href="#lecture4">Lecture 4: IT Strategic Planning & Enterprise Architecture</a> <i>(10 questions)</i></li>
+			<li><a href="#lecture5">Lecture 5: COBIT 5</a> <i>(50 questions)<i /></li>
+		</ul>
+
+		<h2 id="lecture1">Lecture 1: Introduction to IT Governance</h2>
+		<!-- Question 1 -->
+		<div class="question-block" id="question1">
+			<div class="question-number">Question 1</div>
+			<div class="question-text">What does IT governance ensure?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q1" value="A"> A) Unlimited IT spending
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q1" value="B"> B) IT supports and enables enterprise strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q1" value="C"> C) IT operates independently of business goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q1" value="D"> D) IT is only used for compliance
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q1', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 2 -->
+		<div class="question-block" id="question2">
+			<div class="question-number">Question 2</div>
+			<div class="question-text">What is the primary purpose of governance?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q2" value="A"> A) Maximizing IT usage
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q2" value="B"> B) Ensuring effective decision-making and accountability
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q2" value="C"> C) Reducing risks to zero
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q2" value="D"> D) Developing ad hoc strategies
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q2', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 3 -->
+		<div class="question-block" id="question3">
+			<div class="question-number">Question 3</div>
+			<div class="question-text">Who is primarily responsible for IT governance?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q3" value="A"> A) IT technicians
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q3" value="B"> B) The Board of Directors and Executive Management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q3" value="C"> C) Customers
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q3" value="D"> D) Junior employees
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q3', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 4 -->
+		<div class="question-block" id="question4">
+			<div class="question-number">Question 4</div>
+			<div class="question-text">Which organization introduced COBIT?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q4" value="A"> A) ITGI
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q4" value="B"> B) ISACA
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q4" value="C"> C) OECD
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q4" value="D"> D) ISO
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q4', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 5 -->
+		<div class="question-block" id="question5">
+			<div class="question-number">Question 5</div>
+			<div class="question-text">What does GRC stand for?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q5" value="A"> A) Governance, Risk, and Compliance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q5" value="B"> B) Global Regulation Compliance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q5" value="C"> C) Governance, Responsibility, and Control
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q5" value="D"> D) Governance, Regulation, and Costs
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q5', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 6 -->
+		<div class="question-block" id="question6">
+			<div class="question-number">Question 6</div>
+			<div class="question-text">What is one benefit of IT governance?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q6" value="A"> A) Lack of alignment between IT and business goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q6" value="B"> B) Enhanced oversight of IT investments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q6" value="C"> C) Ignoring risks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q6" value="D"> D) Isolated IT decision-making
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q6', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 7 -->
+		<div class="question-block" id="question7">
+			<div class="question-number">Question 7</div>
+			<div class="question-text">Strategic alignment in IT governance refers to:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q7" value="A"> A) Aligning IT goals with enterprise goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q7" value="B"> B) Focusing only on IT growth
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q7" value="C"> C) Minimizing business oversight
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q7" value="D"> D) Removing IT from strategic decisions
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q7', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 8 -->
+		<div class="question-block" id="question8">
+			<div class="question-number">Question 8</div>
+			<div class="question-text">Risk management in IT governance involves:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q8" value="A"> A) Ignoring operational risks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q8" value="B"> B) Safeguarding IT assets and ensuring continuity
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q8" value="C"> C) Minimizing costs only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q8" value="D"> D) Avoiding disaster recovery plans
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q8', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 9 -->
+		<div class="question-block" id="question9">
+			<div class="question-number">Question 9</div>
+			<div class="question-text">Effective IT governance is built on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q9" value="A"> A) Governance structures and processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q9" value="B"> B) Random decisions by IT managers
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q9" value="C"> C) Overinvestment in IT
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q9" value="D"> D) Outsourcing governance responsibilities
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q9', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 10 -->
+		<div class="question-block" id="question10">
+			<div class="question-number">Question 10</div>
+			<div class="question-text">The primary goal of performance measurement in IT governance is:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q10" value="A"> A) Tracking delivery and efficiency of IT services
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q10" value="B"> B) Reducing IT investments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q10" value="C"> C) Eliminating compliance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q10" value="D"> D) Limiting IT operations
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q10', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<h2 id="lecture2">Lecture 2: IT Governance Frameworks & Key Elements</h2>
+		<!-- Question 11 -->
+		<div class="question-block" id="question11">
+			<div class="question-number">Question 11</div>
+			<div class="question-text">Which is not an IT governance framework?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q11" value="A"> A) COBIT
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q11" value="B"> B) Zachman Framework
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q11" value="C"> C) ISO/IEC 38500
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q11" value="D"> D) COSO 45001
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q11', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 12 -->
+		<div class="question-block" id="question12">
+			<div class="question-number">Question 12</div>
+			<div class="question-text">ISO/IEC 38500 provides guidance on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q12" value="A"> A) Financial accounting
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q12" value="B"> B) IT governance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q12" value="C"> C) Data management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q12" value="D"> D) Hardware design
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q12', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 13 -->
+		<div class="question-block" id="question13">
+			<div class="question-number">Question 13</div>
+			<div class="question-text">Which principle is fundamental in IT governance?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q13" value="A"> A) Disregarding risk
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q13" value="B"> B) Setting clear roles and responsibilities
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q13" value="C"> C) Limiting stakeholder involvement
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q13" value="D"> D) Focusing solely on profits
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q13', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 14 -->
+		<div class="question-block" id="question14">
+			<div class="question-number">Question 14</div>
+			<div class="question-text">COBIT 5 is developed by:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q14" value="A"> A) ISACA
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q14" value="B"> B) OECD
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q14" value="C"> C) ISO
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q14" value="D"> D) ITIL
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q14', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 15 -->
+		<div class="question-block" id="question15">
+			<div class="question-number">Question 15</div>
+			<div class="question-text">The balanced scorecard evaluates:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q15" value="A"> A) Financial metrics only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q15" value="B"> B) Customer and employee satisfaction
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q15" value="C"> C) Internal processes and financial results
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q15" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q15', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 16 -->
+		<div class="question-block" id="question16">
+			<div class="question-number">Question 16</div>
+			<div class="question-text">What is the purpose of enterprise architecture frameworks?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q16" value="A"> A) To design complex systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q16" value="B"> B) To ensure alignment with organizational objectives
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q16" value="C"> C) To isolate business processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q16" value="D"> D) To minimize IT growth
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q16', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 17 -->
+		<div class="question-block" id="question17">
+			<div class="question-number">Question 17</div>
+			<div class="question-text">PDCA in ISO frameworks stands for:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q17" value="A"> A) Plan, Do, Check, Act
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q17" value="B"> B) Process, Develop, Communicate, Align
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q17" value="C"> C) Plan, Deliver, Control, Assess
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q17" value="D"> D) Prevent, Detect, Correct, Adjust
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q17', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 18 -->
+		<div class="question-block" id="question18">
+			<div class="question-number">Question 18</div>
+			<div class="question-text">Which ISO standard is for service management?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q18" value="A"> A) ISO/IEC 20000
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q18" value="B"> B) ISO/IEC 38500
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q18" value="C"> C) ISO 31000
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q18" value="D"> D) ISO 9001
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q18', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 19 -->
+		<div class="question-block" id="question19">
+			<div class="question-number">Question 19</div>
+			<div class="question-text">A key element in frameworks for governance is:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q19" value="A"> A) Leadership
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q19" value="B"> B) Randomized operations
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q19" value="C"> C) Isolated processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q19" value="D"> D) Reduced communication
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q19', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 20 -->
+		<div class="question-block" id="question20">
+			<div class="question-number">Question 20</div>
+			<div class="question-text">Which framework focuses on managing IT investments and risks?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q20" value="A"> A) COBIT
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q20" value="B"> B) ITIL
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q20" value="C"> C) ISO 14001
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q20" value="D"> D) BCG Matrix
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q20', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 21 -->
+		<div class="question-block" id="question21">
+			<div class="question-number">Question 21</div>
+			<div class="question-text">COBIT focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q21" value="A"> A) Monitoring IT security only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q21" value="B"> B) Aligning IT strategy with business goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q21" value="C"> C) Ignoring compliance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q21" value="D"> D) Isolating IT departments
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q21', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 22 -->
+		<div class="question-block" id="question22">
+			<div class="question-number">Question 22</div>
+			<div class="question-text">Strategic alignment involves:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q22" value="A"> A) Disconnection between business and IT
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q22" value="B"> B) Ensuring IT objectives support business goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q22" value="C"> C) Minimizing IT’s role in strategy
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q22" value="D"> D) Ignoring financial metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q22', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 23 -->
+		<div class="question-block" id="question23">
+			<div class="question-number">Question 23</div>
+			<div class="question-text">Which is not a balanced scorecard metric area?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q23" value="A"> A) Financial performance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q23" value="B"> B) Business processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q23" value="C"> C) Product lifecycle
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q23" value="D"> D) Learning and growth
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q23', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 24 -->
+		<div class="question-block" id="question24">
+			<div class="question-number">Question 24</div>
+			<div class="question-text">COBIT enablers include:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q24" value="A"> A) Processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q24" value="B"> B) Information
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q24" value="C"> C) People and skills
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q24" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q24', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 25 -->
+		<div class="question-block" id="question25">
+			<div class="question-number">Question 25</div>
+			<div class="question-text">Effective governance frameworks require:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q25" value="A"> A) Stakeholder buy-in
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q25" value="B"> B) Disregarding leadership
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q25" value="C"> C) Isolating IT systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q25" value="D"> D) Ignoring compliance
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q25', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<h2 id="lecture3">Lecture 3: ITG Controls, Communications, and Change</h2>
+		<!-- Question 26 -->
+		<div class="question-block" id="question26">
+			<div class="question-number">Question 26</div>
+			<div class="question-text">What is the purpose of IT controls?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q26" value="A"> A) Limit IT investments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q26" value="B"> B) Ensure system security and reliability
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q26" value="C"> C) Ignore risks and opportunities
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q26" value="D"> D) Enhance operational risks
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q26', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 27 -->
+		<div class="question-block" id="question27">
+			<div class="question-number">Question 27</div>
+			<div class="question-text">General IT controls include:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q27" value="A"> A) Random checks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q27" value="B"> B) User access controls
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q27" value="C"> C) Manual overrides only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q27" value="D"> D) System downtimes
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q27', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 28 -->
+		<div class="question-block" id="question28">
+			<div class="question-number">Question 28</div>
+			<div class="question-text">Application controls are embedded in:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q28" value="A"> A) IT procurement processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q28" value="B"> B) Business process applications
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q28" value="C"> C) Non-functional systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q28" value="D"> D) Financial investments
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q28', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 29 -->
+		<div class="question-block" id="question29">
+			<div class="question-number">Question 29</div>
+			<div class="question-text">A key aspect of performance assurance is:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q29" value="A"> A) IT governance metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q29" value="B"> B) Isolated team activities
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q29" value="C"> C) Unplanned expenditures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q29" value="D"> D) Elimination of business oversight
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q29', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 30 -->
+		<div class="question-block" id="question30">
+			<div class="question-number">Question 30</div>
+			<div class="question-text">What is the primary role of IT change management?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q30" value="A"> A) Stagnate operations
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q30" value="B"> B) Maintain continuity and improve processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q30" value="C"> C) Limit user feedback
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q30" value="D"> D) Focus only on hardware updates
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q30', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 31 -->
+		<div class="question-block" id="question31">
+			<div class="question-number">Question 31</div>
+			<div class="question-text">Manual controls involve:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q31" value="A"> A) Supervisor review and sign-off
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q31" value="B"> B) Automated password systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q31" value="C"> C) System-generated error logs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q31" value="D"> D) Unmonitored tasks
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q31', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 32 -->
+		<div class="question-block" id="question32">
+			<div class="question-number">Question 32</div>
+			<div class="question-text">What is a benefit of regular communication in IT governance?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q32" value="A"> A) Reducing transparency
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q32" value="B"> B) Aligning stakeholders with the organization’s goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q32" value="C"> C) Encouraging isolated departments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q32" value="D"> D) Increasing miscommunication
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q32', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 33 -->
+		<div class="question-block" id="question33">
+			<div class="question-number">Question 33</div>
+			<div class="question-text">What is a type of transformational change implemented gradually?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q33" value="A"> A) Evolution
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q33" value="B"> B) Adaptation
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q33" value="C"> C) Reconstruction
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q33" value="D"> D) Revolution
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q33', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 34 -->
+		<div class="question-block" id="question34">
+			<div class="question-number">Question 34</div>
+			<div class="question-text">Which is not a typical IT control category?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q34" value="A"> A) Preventive controls
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q34" value="B"> B) Detective controls
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q34" value="C"> C) Responsive controls
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q34" value="D"> D) Corrective controls
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q34', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 35 -->
+		<div class="question-block" id="question35">
+			<div class="question-number">Question 35</div>
+			<div class="question-text">Stakeholders in IT governance include:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q35" value="A"> A) Investors and business managers
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q35" value="B"> B) IT staff and suppliers
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q35" value="C"> C) Regulators and auditors
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q35" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q35', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 36 -->
+		<div class="question-block" id="question36">
+			<div class="question-number">Question 36</div>
+			<div class="question-text">What is the primary challenge in enabling change?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q36" value="A"> A) Shifting organizational culture
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q36" value="B"> B) Increasing operational costs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q36" value="C"> C) Ignoring employee feedback
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q36" value="D"> D) Reducing flexibility
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q36', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 37 -->
+		<div class="question-block" id="question37">
+			<div class="question-number">Question 37</div>
+			<div class="question-text">IT controls ensure:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q37" value="A"> A) Risk management and process consistency
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q37" value="B"> B) Increased costs and downtime
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q37" value="C"> C) Elimination of all manual tasks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q37" value="D"> D) Focus only on compliance
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q37', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 38 -->
+		<div class="question-block" id="question38">
+			<div class="question-number">Question 38</div>
+			<div class="question-text">Which approach focuses on rebuilding business models simultaneously?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q38" value="A"> A) Revolution
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q38" value="B"> B) Reconstruction
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q38" value="C"> C) Evolution
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q38" value="D"> D) Adaptation
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q38', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 39 -->
+		<div class="question-block" id="question39">
+			<div class="question-number">Question 39</div>
+			<div class="question-text">What is a primary characteristic of automated IT controls?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q39" value="A"> A) Fully dependent on manual oversight
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q39" value="B"> B) Automatically enforce compliance measures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q39" value="C"> C) Always exclude manual tasks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q39" value="D"> D) Are independent of IT governance
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q39', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 40 -->
+		<div class="question-block" id="question40">
+			<div class="question-number">Question 40</div>
+			<div class="question-text">Key communication content in IT governance includes:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q40" value="A"> A) Business goals and policies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q40" value="B"> B) Industry standards
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q40" value="C"> C) Risk management practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q40" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q40', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<h2 id="lecture4">Lecture 4: IT Strategic Planning & Enterprise Architecture</h2>
+		<!-- Question 41 -->
+		<div class="question-block" id="question41">
+			<div class="question-number">Question 41</div>
+			<div class="question-text">Strategic IT planning involves:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q41" value="A"> A) Ignoring IT priorities
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q41" value="B"> B) Limiting IT investments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q41" value="C"> C) Aligning IT strategy with enterprise goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q41" value="D"> D) Focusing solely on external stakeholders
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q41', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 42 -->
+		<div class="question-block" id="question42">
+			<div class="question-number">Question 42</div>
+			<div class="question-text">Enterprise architecture ensures:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q42" value="A"> A) Independent processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q42" value="B"> B) Only compliance-driven practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q42" value="C"> C) No oversight on operations
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q42" value="D"> D) Consistency in organizational elements
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q42', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 43 -->
+		<div class="question-block" id="question43">
+			<div class="question-number">Question 43</div>
+			<div class="question-text">A component of enterprise architecture is:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q43" value="A"> A) Non-standardized models
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q43" value="B"> B) Business architecture
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q43" value="C"> C) Isolated subsystems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q43" value="D"> D) Randomized elements
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q43', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 44 -->
+		<div class="question-block" id="question44">
+			<div class="question-number">Question 44</div>
+			<div class="question-text">What is a key driver of strategic IT alignment?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q44" value="A"> A) Reduced investment in IT
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q44" value="B"> B) Lack of leadership
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q44" value="C"> C) Business objectives
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q44" value="D"> D) Operational redundancy
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q44', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 45 -->
+		<div class="question-block" id="question45">
+			<div class="question-number">Question 45</div>
+			<div class="question-text">Strategic IT alignment helps:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q45" value="A"> A) Decrease system functionality
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q45" value="B"> B) Focus only on IT hardware
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q45" value="C"> C) Remove business oversight
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q45" value="D"> D) Ensure IT supports business needs
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q45', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 46 -->
+		<div class="question-block" id="question46">
+			<div class="question-number">Question 46</div>
+			<div class="question-text">The balanced scorecard includes:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q46" value="A"> A) Financial metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q46" value="B"> B) All of the above
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q46" value="C"> C) Business process measures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q46" value="D"> D) Customer satisfaction metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q46', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 47 -->
+		<div class="question-block" id="question47">
+			<div class="question-number">Question 47</div>
+			<div class="question-text">Benchmarking enables organizations to:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q47" value="A"> A) Avoid process improvement
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q47" value="B"> B) Focus only on internal processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q47" value="C"> C) Compare performance with peers
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q47" value="D"> D) Eliminate all competitive advantages
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q47', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 48 -->
+		<div class="question-block" id="question48">
+			<div class="question-number">Question 48</div>
+			<div class="question-text">Business process reengineering focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q48" value="A"> A) Minor changes to IT infrastructure
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q48" value="B"> B) Complete redesign of processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q48" value="C"> C) Ignoring operational efficiencies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q48" value="D"> D) Isolating business goals from IT
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q48', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 49 -->
+		<div class="question-block" id="question49">
+			<div class="question-number">Question 49</div>
+			<div class="question-text">IT strategy formulation should consider:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q49" value="A"> A) Only current technologies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q49" value="B"> B) Disconnected IT systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q49" value="C"> C) Business objectives and competitive environment
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q49" value="D"> D) Ignoring costs and risks
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q49', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 50 -->
+		<div class="question-block" id="question50">
+			<div class="question-number">Question 50</div>
+			<div class="question-text">Enterprise architecture compliance ensures:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q50" value="A"> A) Uncoordinated IT systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q50" value="B"> B) Randomized processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q50" value="C"> C) Disconnected business functions
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q50" value="D"> D) Alignment with governance standards
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q50', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<h2 id="lecture5">Lecture 5: COBIT 5</h2>
+		<!-- Question 51 -->
+		<div class="question-block" id="question51">
+			<div class="question-number">Question 51</div>
+			<div class="question-text">COBIT 5 is primarily focused on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q51" value="A"> A) Aligning IT with business goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q51" value="B"> B) Isolating IT governance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q51" value="C"> C) Minimizing stakeholder involvement
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q51" value="D"> D) Eliminating IT risks
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q51', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 52 -->
+		<div class="question-block" id="question52">
+			<div class="question-number">Question 52</div>
+			<div class="question-text">Which principle is not part of COBIT 5?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q52" value="A"> A) Meeting stakeholder needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q52" value="B"> B) Isolating governance from management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q52" value="C"> C) Applying a single integrated framework
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q52" value="D"> D) Ignoring resource optimization
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q52', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 53 -->
+		<div class="question-block" id="question53">
+			<div class="question-number">Question 53</div>
+			<div class="question-text">COBIT 5 enablers include:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q53" value="A"> A) Processes and information
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q53" value="B"> B) Organizational structures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q53" value="C"> C) Culture and behavior
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q53" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q53', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 54 -->
+		<div class="question-block" id="question54">
+			<div class="question-number">Question 54</div>
+			<div class="question-text">Stakeholder needs in COBIT 5 are addressed through:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q54" value="A"> A) Ignoring compliance metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q54" value="B"> B) Isolated IT strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q54" value="C"> C) Resource-heavy processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q54" value="D"> D) The goals cascade
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q54', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 55 -->
+		<div class="question-block" id="question55">
+			<div class="question-number">Question 55</div>
+			<div class="question-text">The goals cascade translates:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q55" value="A"> A) Stakeholder needs into actionable goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q55" value="B"> B) Compliance rules into exceptions
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q55" value="C"> C) IT goals into irrelevant outcomes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q55" value="D"> D) None of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q55', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 56 -->
+		<div class="question-block" id="question56">
+			<div class="question-number">Question 56</div>
+			<div class="question-text">COBIT 5 ensures governance by:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q56" value="A"> A) Limiting IT processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q56" value="B"> B) Ignoring management oversight
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q56" value="C"> C) Focusing solely on operational goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q56" value="D"> D) Aligning with enterprise standards
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q56', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 57 -->
+		<div class="question-block" id="question57">
+			<div class="question-number">Question 57</div>
+			<div class="question-text">COBIT 5 promotes the separation of:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q57" value="A"> A) Governance and management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q57" value="B"> B) Risk and compliance metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q57" value="C"> C) IT processes and resource management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q57" value="D"> D) Stakeholders and IT goals
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q57', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 58 -->
+		<div class="question-block" id="question58">
+			<div class="question-number">Question 58</div>
+			<div class="question-text">What is one key benefit of COBIT 5?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q58" value="A"> A) Focuses on isolated IT issues
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q58" value="B"> B) Ignores stakeholder alignment
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q58" value="C"> C) Promotes unified IT governance and management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q58" value="D"> D) Minimizes IT contributions to business goals
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q58', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 59 -->
+		<div class="question-block" id="question59">
+			<div class="question-number">Question 59</div>
+			<div class="question-text">COBIT 5 principles include:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q59" value="A"> A) Separating governance from management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q59" value="B"> B) Enabling a holistic approach
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q59" value="C"> C) Meeting stakeholder needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q59" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q59', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 60 -->
+		<div class="question-block" id="question60">
+			<div class="question-number">Question 60</div>
+			<div class="question-text">The COBIT 5 enabler "processes" focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q60" value="A"> A) Avoiding risk assessments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q60" value="B"> B) Disregarding IT applications
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q60" value="C"> C) Documenting and aligning organizational activities
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q60" value="D"> D) Ignoring IT compliance
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q60', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 61 -->
+		<div class="question-block" id="question61">
+			<div class="question-number">Question 61</div>
+			<div class="question-text">What does COBIT 5 mean by “holistic approach”?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q61" value="A"> A) Isolated IT functions
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q61" value="B"> B) Risk-heavy operational processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q61" value="C"> C) Governance across the organization
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q61" value="D"> D) Unaligned enterprise standards
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q61', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 62 -->
+		<div class="question-block" id="question62">
+			<div class="question-number">Question 62</div>
+			<div class="question-text">Which is a COBIT 5 enabler?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q62" value="A"> A) Principles, policies, and frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q62" value="B"> B) Disconnected compliance structures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q62" value="C"> C) IT-only governance practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q62" value="D"> D) Randomized business metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q62', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 63 -->
+		<div class="question-block" id="question63">
+			<div class="question-number">Question 63</div>
+			<div class="question-text">What drives COBIT 5’s enablers?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q63" value="A"> A) The goals cascade
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q63" value="B"> B) Ignoring compliance requirements
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q63" value="C"> C) Isolated management practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q63" value="D"> D) Disregarded IT assets
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q63', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 64 -->
+		<div class="question-block" id="question64">
+			<div class="question-number">Question 64</div>
+			<div class="question-text">COBIT 5 advocates that organizations:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q64" value="A"> A) Prioritize isolated IT functions
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q64" value="B"> B) Use governance and management processes to cover key areas
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q64" value="C"> C) Disregard stakeholder value needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q64" value="D"> D) Ignore compliance metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q64', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 65 -->
+		<div class="question-block" id="question65">
+			<div class="question-number">Question 65</div>
+			<div class="question-text">COBIT 5’s “Meeting Stakeholder Needs” principle focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q65" value="A"> A) Prioritizing stakeholder value interests
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q65" value="B"> B) Avoiding organizational alignment
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q65" value="C"> C) Limiting decision-making processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q65" value="D"> D) Excluding stakeholder feedback
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q65', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 66 -->
+		<div class="question-block" id="question66">
+			<div class="question-number">Question 66</div>
+			<div class="question-text">Governance, as defined in COBIT 5, ensures:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q66" value="A"> A) Stakeholder needs are met through evaluation and direction
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q66" value="B"> B) Management operates independently of governance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q66" value="C"> C) Resources are allocated arbitrarily
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q66" value="D"> D) Business priorities are separated from IT priorities
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q66', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 67 -->
+		<div class="question-block" id="question67">
+			<div class="question-number">Question 67</div>
+			<div class="question-text">Management under COBIT 5:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q67" value="A"> A) Ignores enterprise goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q67" value="B"> B) Executes decisions aligned with governance direction
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q67" value="C"> C) Is responsible for disconnected processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q67" value="D"> D) Prioritizes resource allocation over compliance
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q67', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 68 -->
+		<div class="question-block" id="question68">
+			<div class="question-number">Question 68</div>
+			<div class="question-text">Which standard aligns well with COBIT 5?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q68" value="A"> A) ITIL
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q68" value="B"> B) ISO/IEC 38500
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q68" value="C"> C) COSO ERM
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q68" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q68', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 69 -->
+		<div class="question-block" id="question69">
+			<div class="question-number">Question 69</div>
+			<div class="question-text">Enabler "culture, ethics, and behavior" focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q69" value="A"> A) Individual and organizational success factors
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q69" value="B"> B) Ignoring enterprise culture
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q69" value="C"> C) Avoiding ethical governance practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q69" value="D"> D) Disregarding compliance standards
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q69', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 70 -->
+		<div class="question-block" id="question70">
+			<div class="question-number">Question 70</div>
+			<div class="question-text">Principles, policies, and frameworks as enablers:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q70" value="A"> A) Provide practical guidance for day-to-day management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q70" value="B"> B) Ensure disconnected processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q70" value="C"> C) Exclude stakeholder value principles
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q70" value="D"> D) Promote random compliance measures
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q70', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 71 -->
+		<div class="question-block" id="question71">
+			<div class="question-number">Question 71</div>
+			<div class="question-text">Information in COBIT 5 is considered:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q71" value="A"> A) A critical asset for enterprise success
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q71" value="B"> B) Independent of enterprise processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q71" value="C"> C) Unnecessary for governance decisions
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q71" value="D"> D) Solely for operational metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q71', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 72 -->
+		<div class="question-block" id="question72">
+			<div class="question-number">Question 72</div>
+			<div class="question-text">COBIT 5’s implementation includes:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q72" value="A"> A) Ad hoc governance principles
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q72" value="B"> B) Randomized strategic alignment processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q72" value="C"> C) Clear direction and stakeholder communication
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q72" value="D"> D) Disconnected stakeholder metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q72', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 73 -->
+		<div class="question-block" id="question73">
+			<div class="question-number">Question 73</div>
+			<div class="question-text">Risk optimization in COBIT 5 focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q73" value="A"> A) Balancing risk and value creation
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q73" value="B"> B) Avoiding risk assessment
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q73" value="C"> C) Disregarding compliance needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q73" value="D"> D) Limiting governance responsibilities
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q73', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 74 -->
+		<div class="question-block" id="question74">
+			<div class="question-number">Question 74</div>
+			<div class="question-text">COBIT 5 advocates for governance that:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q74" value="A"> A) Operates independently of management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q74" value="B"> B) Balances benefits, risks, and resource use
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q74" value="C"> C) Limits stakeholder alignment
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q74" value="D"> D) Reduces value delivery practices
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q74', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 75 -->
+		<div class="question-block" id="question75">
+			<div class="question-number">Question 75</div>
+			<div class="question-text">A critical output of COBIT 5 processes is:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q75" value="A"> A) Stakeholder-aligned IT governance practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q75" value="B"> B) Isolated IT strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q75" value="C"> C) Increased operational disarray
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q75" value="D"> D) Reduced stakeholder feedback
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q75', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 76 -->
+		<div class="question-block" id="question76">
+			<div class="question-number">Question 76</div>
+			<div class="question-text">Which enabler category involves decision-making entities?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q76" value="A"> A) Organizational structures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q76" value="B"> B) Non-standardized governance processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q76" value="C"> C) Disconnected frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q76" value="D"> D) Randomized IT policies
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q76', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 77 -->
+		<div class="question-block" id="question77">
+			<div class="question-number">Question 77</div>
+			<div class="question-text">What distinguishes governance from management in COBIT 5?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q77" value="A"> A) Governance focuses on evaluation and direction, management on
+						execution
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q77" value="B"> B) Governance ignores risk management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q77" value="C"> C) Management prioritizes governance tasks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q77" value="D"> D) Governance excludes resource optimization
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q77', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 78 -->
+		<div class="question-block" id="question78">
+			<div class="question-number">Question 78</div>
+			<div class="question-text">COBIT 5 aligns well with which IT standard?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q78" value="A"> A) ITIL
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q78" value="B"> B) ISO/IEC 38500
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q78" value="C"> C) COSO ERM
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q78" value="D"> D) All of the above
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q78', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 79 -->
+		<div class="question-block" id="question79">
+			<div class="question-number">Question 79</div>
+			<div class="question-text">Governance under COBIT 5 includes:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q79" value="A"> A) Balancing stakeholder needs and enterprise goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q79" value="B"> B) Ignoring compliance requirements
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q79" value="C"> C) Focusing solely on IT performance
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q79" value="D"> D) Disregarding risk mitigation
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q79', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 80 -->
+		<div class="question-block" id="question80">
+			<div class="question-number">Question 80</div>
+			<div class="question-text">Which is the latest version of COBIT?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q80" value="A"> A) COBIT 3
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q80" value="B"> B) COBIT 4
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q80" value="C"> C) COBIT 5
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q80" value="D"> D) COBIT 6
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q80', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 81 -->
+		<div class="question-block" id="question81">
+			<div class="question-number">Question 81</div>
+			<div class="question-text">COBIT 5 integrates governance and management by:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q81" value="A"> A) Ignoring resource optimization
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q81" value="B"> B) Overlooking compliance frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q81" value="C"> C) Promoting isolated IT strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q81" value="D"> D) Combining governance structures and operational management
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q81', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 82 -->
+		<div class="question-block" id="question82">
+			<div class="question-number">Question 82</div>
+			<div class="question-text">COBIT 5’s enabler “services, infrastructure, and applications” focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q82" value="A"> A) Providing IT processing and services to the enterprise
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q82" value="B"> B) Reducing IT investments
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q82" value="C"> C) Excluding software applications
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q82" value="D"> D) Disconnecting IT from business goals
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q82', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 83 -->
+		<div class="question-block" id="question83">
+			<div class="question-number">Question 83</div>
+			<div class="question-text">Which enabler involves skills and competencies?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q83" value="A"> A) People, skills, and competencies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q83" value="B"> B) Infrastructure
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q83" value="C"> C) Information
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q83" value="D"> D) Processes
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q83', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 84 -->
+		<div class="question-block" id="question84">
+			<div class="question-number">Question 84</div>
+			<div class="question-text">COBIT 5 helps organizations optimize:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q84" value="A"> A) IT resources, risk, and benefits
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q84" value="B"> B) Isolated IT frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q84" value="C"> C) Randomized business metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q84" value="D"> D) Only compliance efforts
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q84', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 85 -->
+		<div class="question-block" id="question85">
+			<div class="question-number">Question 85</div>
+			<div class="question-text">The COBIT 5 principle “covering the enterprise end-to-end” ensures:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q85" value="A"> A) IT governance includes all business functions
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q85" value="B"> B) IT management is isolated
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q85" value="C"> C) Compliance is ignored
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q85" value="D"> D) IT frameworks are separated from enterprise goals
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q85', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 86 -->
+		<div class="question-block" id="question86">
+			<div class="question-number">Question 86</div>
+			<div class="question-text">COBIT 5's "single integrated framework" aligns with:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q86" value="A"> A) Ad hoc governance principles
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q86" value="B"> B) Randomized compliance measures
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q86" value="C"> C) Standards such as ITIL, ISO/IEC 38500, and PRINCE2
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q86" value="D"> D) Independent IT-only frameworks
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q86', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 87 -->
+		<div class="question-block" id="question87">
+			<div class="question-number">Question 87</div>
+			<div class="question-text">The separation of governance and management under COBIT 5 ensures:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q87" value="A"> A) Governance focuses on direction and oversight, management on
+						execution
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q87" value="B"> B) Management oversees compliance independently
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q87" value="C"> C) Governance is irrelevant to business processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q87" value="D"> D) Both governance and management handle the same activities
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q87', 'A', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 88 -->
+		<div class="question-block" id="question88">
+			<div class="question-number">Question 88</div>
+			<div class="question-text">Which COBIT 5 enabler supports ethical practices and organizational culture?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q88" value="A"> A) Information
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q88" value="B"> B) Processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q88" value="C"> C) Governance principles
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q88" value="D"> D) Culture, ethics, and behavior
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q88', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 89 -->
+		<div class="question-block" id="question89">
+			<div class="question-number">Question 89</div>
+			<div class="question-text">COBIT 5 aligns with the concept of "value creation" by:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q89" value="A"> A) Focusing solely on IT infrastructure
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q89" value="B"> B) Delivering benefits while balancing risk and resource use
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q89" value="C"> C) Ignoring risk management
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q89" value="D"> D) Isolating enterprise goals
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q89', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 90 -->
+		<div class="question-block" id="question90">
+			<div class="question-number">Question 90</div>
+			<div class="question-text">Which COBIT 5 principle emphasizes achieving strategic enterprise objectives?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q90" value="A"> A) Enabling a holistic approach
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q90" value="B"> B) Meeting stakeholder needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q90" value="C"> C) Meeting stakeholder needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q90" value="D"> D) Applying isolated processes
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q90', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 91 -->
+		<div class="question-block" id="question91">
+			<div class="question-number">Question 91</div>
+			<div class="question-text">COBIT 5's framework includes:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q91" value="A"> A) Ten principles only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q91" value="B"> B) Five principles and seven enablers
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q91" value="C"> C) Four enablers only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q91" value="D"> D) Isolated operational metrics
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q91', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 92 -->
+		<div class="question-block" id="question92">
+			<div class="question-number">Question 92</div>
+			<div class="question-text">Stakeholder value in COBIT 5 is supported through:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q92" value="A"> A) Overlooking management involvement
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q92" value="B"> B) Ignoring stakeholder needs
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q92" value="C"> C) Governance that balances benefits and risks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q92" value="D"> D) Prioritizing resource-heavy solutions
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q92', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 93 -->
+		<div class="question-block" id="question93">
+			<div class="question-number">Question 93</div>
+			<div class="question-text">What drives the effectiveness of COBIT 5’s enablers?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q93" value="A"> A) Independent frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q93" value="B"> B) The goals cascade
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q93" value="C"> C) Disregarded IT strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q93" value="D"> D) Ignoring compliance requirements
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q93', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 94 -->
+		<div class="question-block" id="question94">
+			<div class="question-number">Question 94</div>
+			<div class="question-text">COBIT 5 supports compliance with:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q94" value="A"> A) Isolated IT standards only
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q94" value="B"> B) Randomized governance metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q94" value="C"> C) Legal, regulatory, and contractual requirements
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q94" value="D"> D) Ignoring enterprise-wide frameworks
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q94', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 95 -->
+		<div class="question-block" id="question95">
+			<div class="question-number">Question 95</div>
+			<div class="question-text">COBIT 5 helps enterprises achieve:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q95" value="A"> A) Compliance-only strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q95" value="B"> B) Separation of IT from business objectives
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q95" value="C"> C) Strategic goals through effective governance of IT
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q95" value="D"> D) Disconnect from stakeholder value
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q95', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 96 -->
+		<div class="question-block" id="question96">
+			<div class="question-number">Question 96</div>
+			<div class="question-text">Which is not a COBIT 5 enabler category?</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q96" value="A"> A) Processes
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q96" value="B"> B) Principles, policies, and frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q96" value="C"> C) Resource-heavy frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q96" value="D"> D) Information
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q96', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 97 -->
+		<div class="question-block" id="question97">
+			<div class="question-number">Question 97</div>
+			<div class="question-text">COBIT 5 recommends integrating:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q97" value="A"> A) Isolated IT management practices
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q97" value="B"> B) Compliance measures with ad hoc frameworks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q97" value="C"> C) IT frameworks with enterprise-wide governance systems
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q97" value="D"> D) Disconnected organizational structures
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q97', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 98 -->
+		<div class="question-block" id="question98">
+			<div class="question-number">Question 98</div>
+			<div class="question-text">The principle "enabling a holistic approach" focuses on:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q98" value="A"> A) Risk-heavy operational tasks
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q98" value="B"> B) Interconnected enablers for governance success
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q98" value="C"> C) Compliance-only governance metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q98" value="D"> D) Isolated business goals
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q98', 'B', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 99 -->
+		<div class="question-block" id="question99">
+			<div class="question-number">Question 99</div>
+			<div class="question-text">COBIT 5's enabler "organizational structures" refers to:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q99" value="A"> A) IT-only management roles
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q99" value="B"> B) Disconnected business goals
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q99" value="C"> C) Decision-making entities in an organization
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q99" value="D"> D) Randomly assigned responsibilities
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q99', 'C', this)">Show ChatGPT Answer</button>
+		</div>
+
+		<!-- Question 100 -->
+		<div class="question-block" id="question100">
+			<div class="question-number">Question 100</div>
+			<div class="question-text">COBIT 5 aligns governance with:</div>
+			<ul class="answers">
+				<li>
+					<label>
+						<input type="radio" name="q100" value="A"> A) Isolated IT-only strategies
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q100" value="B"> B) Random compliance metrics
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q100" value="C"> C) Disregarded operational alignment
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="q100" value="D"> D) Enterprise goals and strategic objectives
+					</label>
+				</li>
+			</ul>
+			<button class="show-answer-btn" onclick="toggleAnswer('q100', 'D', this)">Show ChatGPT Answer</button>
+		</div>
+
+	</div>
+
+	<script>
+		function toggleAnswer(questionName, correctOption, btn) {
+			const radios = document.getElementsByName(questionName);
+			let isSelected = false;
+
+			// Check if the correct answer is already selected
+			radios.forEach(radio => {
+				if (radio.value === correctOption && radio.checked) {
+					isSelected = true;
+				}
+			});
+
+			if (!isSelected) {
+				// Select the correct answer
+				radios.forEach(radio => {
+					if (radio.value === correctOption) {
+						radio.checked = true;
+					} else {
+						radio.checked = false;
+					}
+				});
+				btn.textContent = "Hide ChatGPT Answer";
+			} else {
+				// Deselect all options
+				radios.forEach(radio => {
+					radio.checked = false;
+				});
+				btn.textContent = "Show ChatGPT Answer";
+			}
+		}
+	</script>
+
+</body>
+
+</html>
